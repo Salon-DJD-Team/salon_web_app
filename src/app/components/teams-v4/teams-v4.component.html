@@ -1,0 +1,41 @@
+<!-- Speakers Three -->
+<section id="speakers" class="event-team-section">
+    <div class="circle-layer" style="background-image:url(assets/images/icons/icon-circle-1.png)"></div>
+    <div class="auto-container">
+      <div class="sec-title centered">
+        <div class="sec-title_title">Speakers</div>
+        <h2 class="sec-title_heading">Who's Speaking</h2>
+        <div class="sec-title_text">
+          Lorem ipsum gravida nibh vel velit auctor aliquetnean sollicitudin, lorem quis Bibendum <br />
+          auci elit consequat ipsutis sem nibh id elit
+        </div>
+      </div>
+  
+      <div class="row clearfix">
+        <div class="event-team-member col-lg-3 col-md-6 col-sm-12" *ngFor="let team of teams">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image">
+                <img [src]="team.image" [alt]="team.name" />
+              </figure>
+              <div class="overlay-box">
+                <div class="inner">
+                  <ul class="social-icons">
+                    <li><a [href]="team.social.facebook" class="facebook fa-brands fa-facebook-f" target="_blank"></a></li>
+                    <li><a [href]="team.social.twitter" class="twitter fa-brands fa-twitter" target="_blank"></a></li>
+                    <li><a [href]="team.social.instagram" class="instagram fa-brands fa-instagram" target="_blank"></a></li>
+                    <li><a [href]="team.social.youtube" class="youtube fa-brands fa-youtube" target="_blank"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="lower-content">
+              <h3><a href="speaker-details/{{team.slug}}">{{ team.name }}</a></h3>
+              <div class="designation">{{ team.designation }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>  
+<!-- End Speakers Three -->

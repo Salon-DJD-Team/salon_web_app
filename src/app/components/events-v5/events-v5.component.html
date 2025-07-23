@@ -1,0 +1,87 @@
+<!-- Event Schedule Section-->
+<section class="event-schedule-section">
+  <div class="circle-layer" style="background-image:url(assets/images/icons/circle-icon-two.png)"></div>
+  <div class="shape-icon" style="background-image:url(assets/images/icons/shape-1.png)"></div>
+  <div class="auto-container">
+    <!-- Sec Title -->
+    <div class="sec-title centered">
+        <div class="sec-title_title">Events</div>
+        <h2 class="sec-title_heading">Event Schedule</h2>
+        <div class="sec-title_text">Lorem ipsum gravida nibh vel velit auctor aliquetnean sollicitudin, lorem quis Bibendum <br> auci elit consequat ipsutis sem nibh id elit</div>
+    </div>
+    
+    <div class="schedule-tabs tabs-box">
+      <div class="btns-box">
+        <!-- Tabs Box -->
+        <ul class="tab-buttons clearfix">
+          <li *ngFor="let tab of tabs"
+              class="tab-btn"
+              [class.active-btn]="activeTab === tab.id"
+              (click)="activeTab = tab.id">
+            <span class="day">{{ tab.day }}</span>
+            <span class="date">{{ tab.date }}</span>
+            <span class="month">{{ tab.month }}</span> {{ tab.year }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="tabs-content">
+        <div *ngFor="let tab of tabs"
+            class="tab"
+            [class.active-tab]="activeTab === tab.id"
+            [id]="tab.id">
+          <div class="schedule-timeline">
+            <!-- Schedule Block -->
+            <div class="schedule-block" *ngFor="let event of tab.events">
+              <div class="inner-box">
+                <div class="content">
+                  <div class="author-box">
+                    <div class="box-inner">
+                      <div class="author-image">
+                        <img [src]="event.authorImage" alt="" />
+                      </div>
+                      <h6>{{ event.authorName }}</h6>
+                      <div class="designation">{{ event.authorDesignation }}</div>
+                    </div>
+                  </div>
+                  <div class="date">{{ event.eventDate }}</div>
+                  <h4>{{ event.eventTitle }}</h4>
+                  <div class="text">{{ event.eventDescription }}</div>
+                  <ul class="event-info">
+                    <li><span class="icon flaticon-maps-and-flags"></span>{{ event.eventLocation }}</li>
+                    <li><span class="icon flaticon-call-1"></span>{{ event.eventTime }}</li>
+                  </ul>
+                  <div class="btns-box">
+                    <a href="event-details/{{ event.link }}" class="theme-btn btn-style-one">
+                      <span class="btn-wrap">
+                        <span class="text-one">View Details</span>
+                        <span class="text-two">View Details</span>
+                      </span>
+                    </a>
+                    <a href="event-details/{{ event.link }}" class="theme-btn btn-style-two">
+                      <span class="btn-wrap">
+                        <span class="text-one">Buy Ticket</span>
+                        <span class="text-two">Buy Ticket</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="download-btns-box text-center">
+      <a href="speakers" class="theme-btn btn-style-two">
+        <span class="btn-wrap">
+          <span class="text-one">Download Schedules</span>
+          <span class="text-two">Download Schedules</span>
+        </span>
+      </a>
+    </div>
+      
+  </div>
+</section>
+<!-- End Event Schedule Section-->
