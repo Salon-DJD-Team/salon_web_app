@@ -1,0 +1,34 @@
+<!-- Event Feature Section-->
+<section class="event-feature-section">
+    <!-- Icon One -->
+    <div class="circle-layer" style="background-image:url(assets/images/icons/circle-pink.png)"></div>
+    <div class="circle-layer-two" style="background-image:url(assets/images/icons/circle-icon-one.png)"></div>
+    <div class="circle-layer-three" style="background-image:url(assets/images/icons/events-bg.png)"></div>
+    <div class="auto-container">
+        <!-- Sec Title -->
+        <div class="sec-title centered">
+            <div class="sec-title_title">Features</div>
+            <h2 class="sec-title_heading">Our Features</h2>
+        </div>
+        <div class="row clearfix">
+            
+            <!-- Event Feature Block -->
+            <div class="event-feature-block col-lg-4 col-md-6 col-sm-12" *ngFor="let feature of features">
+                <div class="inner-box">
+                  <div class="left-border"></div>
+                  <div class="top-border"></div>
+                  <div class="right-border"></div>
+                  <div class="bottom-border"></div>
+                  <div class="icon-box">
+                    <span class="icon"><img [src]="feature.icon" [alt]="feature.title" /></span>
+                  </div>
+                  <h4><a href="event-details/{{ feature.slug }}">{{ feature.title }}</a></h4>
+                  <div class="text">{{ feature.description }}</div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</section>
+<!-- End Event Feature Section-->

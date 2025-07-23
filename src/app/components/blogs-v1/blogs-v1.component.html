@@ -1,0 +1,50 @@
+<!-- News One -->
+<section id="blog" class="news-one style-two">
+    <div class="auto-container">
+      <div class="sec-title">
+        <div class="d-flex justify-content-between align-items-end flex-wrap">
+          <div class="title-box title-anim">
+            <div class="sec-title_title">Blog % Articles</div>
+            <h2 class="sec-title_heading">News & Articles</h2>
+          </div>
+          <div class="button-box title-anim">
+            <a href="blog-classic" class="theme-btn btn-style-one">
+              <span class="btn-wrap">
+                <span class="text-one">View More News</span>
+                <span class="text-two">View More News</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row clearfix">
+        <!-- News Block -->
+        <div *ngFor="let article of articles" class="news-block_one col-lg-4 col-md-6 col-sm-12">
+          <div class="news-block_one-inner">
+            <!-- Post Info -->
+            <div class="news-block_one-tag">{{ article.category }}</div>
+            <div class="news-block_one-image">
+              <a href="blog-details/{{ article.slug }}">
+                <img [src]="article.image" [alt]="article.title" />
+              </a>
+              <img [src]="article.image" [alt]="article.title" />
+            </div>
+            <div class="news-block_one-content">
+              <div class="news-block_one-date">{{ article.date | date: 'd MMM y' }}</div>
+              <ul class="news-block_one-meta">
+                <li><span class="icon fa-regular fa-calendar fa-fw"></span>by {{ article.author }}</li>
+                <li><span class="icon fa-solid fa-comments fa-fw"></span>({{ article.comments }}) Comments</li>
+              </ul>
+              <h5 class="news-block_one-title">
+                <a href="blog-details/{{ article.slug }}">{{ article.title }}</a>
+              </h5>
+              <a class="news-block_one-more" href="blog-details/{{ article.slug }}">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End News One -->
+  
