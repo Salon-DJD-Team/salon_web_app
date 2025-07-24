@@ -1,0 +1,54 @@
+<!-- Event Pricing Section-->
+<section class="event-pricing-section">
+    <div class="circle-layer" style="background-image:url(assets/images/icons/circle-blue.png)"></div>
+    <div class="auto-container">
+        <!-- Sec Title -->
+        <div class="sec-title centered">
+            <div class="sec-title_title">Pricing</div>
+            <h2 class="sec-title_heading">Pricing Plans</h2>
+            <div class="sec-title_text">Lorem ipsum gravida nibh vel velit auctor aliquetnean sollicitudin, lorem quis Bibendum <br> auci elit consequat ipsutis sem nibh id elit</div>
+        </div>
+        <div class="row clearfix">
+            
+            <!-- Event Price Block -->
+            <div class="event-price-block col-lg-4 col-md-6 col-sm-12" *ngFor="let price of pricing">
+                <div class="inner-box wow {{ price.animation }}" data-wow-delay="0ms" data-wow-duration="1500ms">
+                <div class="left-border"></div>
+                <div class="top-border"></div>
+                <div class="right-border"></div>
+                <div class="bottom-border"></div>
+
+                <div class="title">
+                    <span class="icon {{ price.icon }}"></span>
+                    {{ price.title }}
+                </div>
+
+                <div class="price-box">
+                    <div class="box-inner">
+                    <div class="circles-box">
+                        <span class="circle-one"></span>
+                        <span class="circle-two"></span>
+                    </div>
+                    <div class="price"><sup>$</sup>{{ price.price }}</div>
+                    </div>
+                </div>
+
+                <div class="tickets">{{ price.tickets }}</div>
+
+                <ul class="price-list">
+                    <li *ngFor="let feature of price.features">{{ feature }}</li>
+                </ul>
+
+                <a href="{{ price.button_link }}" class="theme-btn btn-style-one">
+                    <span class="btn-wrap">
+                    <span class="text-one">{{ price.button_name }}</span>
+                    <span class="text-two">{{ price.button_name }}</span>
+                    </span>
+                </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- End Event Pricing Section-->

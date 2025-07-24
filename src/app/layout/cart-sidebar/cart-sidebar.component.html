@@ -1,0 +1,58 @@
+<!-- Sidebar Cart Item -->
+<div class="xs-sidebar-group info-group">
+    <div class="xs-overlay xs-bg-black"></div>
+    <div class="xs-sidebar-widget">
+        <div class="sidebar-widget-container">
+            <div class="close-button">
+                <span class="flaticon-cancel-1"></span>
+            </div>
+            <div class="sidebar-textwidget">
+                
+                <div class="sidebar-info-contents">
+                    <div class="content-inner">
+                    
+                        <div class="title-box">
+                            <h5>Shopping <span>Bag</span></h5>
+                            <div class="price">$15 from free economy shipping</div>
+                        </div>
+                        
+                        <div class="empty-cart-box">
+                            <div class="no-cart">
+                                <div class="post-block" *ngFor="let product of products">
+                                    <div class="inner-box">
+                                        <div class="image">
+                                            <img [src]="product.image" [alt]="product.name" />
+                                        </div>
+                                        <h6><a href="product-details/{{ product.slug }}">{{ product.name }}</a></h6>
+                                        <div class="rating">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="price-box">$125</div>
+                                        <a class="theme-btn bag-btn" href="cart">add to bag</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bottom-box">
+                            <div class="cart-subtotal">
+                                <p>Subtotal:</p>
+                                <strong class="woocommerce-Price-amount amount">$92.00</strong>
+                            </div>
+                            <div class="cart-action">
+                                <a href="cart"><span>View Cart</span></a>
+                                <a href="checkout"><span>Check Out</span></a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
