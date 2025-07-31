@@ -12,7 +12,7 @@ declare var time_countdown: any;
   templateUrl: './slider-v4.component.html',
 })
 export class SliderV4Component implements AfterViewInit {
-  
+
 	ngAfterViewInit(): void {
 	(function ($) {
 		setTimeout(function(){
@@ -22,6 +22,13 @@ export class SliderV4Component implements AfterViewInit {
 			time_countdown();
 		  }, 100);
 	  })(jQuery);
+  }
+
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
 }

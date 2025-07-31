@@ -1,0 +1,35 @@
+<!-- Services One -->
+<section class="services-one">
+    <div class="services-one_pattern-one" style="background-image:url(assets/images/background/pattern-6.png)"></div>
+    <div class="services-one_pattern-two" data-parallax='{"y" : 100}' style="background-image:url(assets/images/background/pattern-10.png)"></div>
+    <div class="auto-container">
+        <div class="sec-title centered title-anim">
+            <div class="sec-title_title">Secteurs</div>
+            <h2 class="sec-title_heading">Espaces Métiers </h2>
+        </div>
+        <div class="row clearfix">
+
+            <!-- Service Block One -->
+            <div
+                class="service-block_one col-lg-3 col-md-6 col-sm-12"
+                *ngFor="let service of services; let i = index"
+            >
+                <div
+                class="service-block_one-inner wow"
+                [ngClass]="getAnimationClass(i)"
+                [attr.data-wow-delay]="'0ms'"
+                data-wow-duration="1500ms"
+                >
+                <div class="service-block_one-icon" [ngClass]="service.icon"></div>
+                <h4 class="service-block_one-heading">
+                    <a href="#">{{ service.title }}</a>
+                </h4>
+                <div class="service-block_one-text">{{ service.description }}</div>
+                <a href="#" class="service-block_one-arrow flaticon-next-2"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End Services One -->
