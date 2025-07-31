@@ -9,6 +9,7 @@ import { CtaV1Component } from '../../components/cta-v1/cta-v1.component';
 import { BlogsV1Component } from '../../components/blogs-v1/blogs-v1.component';
 import { SliderV4Component } from '../../components/slider-v4/slider-v4.component';
 import { AboutUsV4Component } from '../../components/slider-v4/about-us-v4/about-us-v4.component';
+import { ServicesV1Component } from "../../components/services-v1/services-v1.component";
 
 @Component({
   selector: 'app-home-v4',
@@ -22,8 +23,9 @@ import { AboutUsV4Component } from '../../components/slider-v4/about-us-v4/about
     PricePlanV4Component,
     TeamsV4Component,
     CtaV1Component,
-    BlogsV1Component
-  ],
+    BlogsV1Component,
+    ServicesV1Component
+],
   templateUrl: './home-v4.component.html',
 })
 export class HomeV4Component {

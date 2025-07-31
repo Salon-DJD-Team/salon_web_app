@@ -7,11 +7,11 @@
     <div class="auto-container">
         <!-- Sec Title -->
         <div class="sec-title centered">
-            <div class="sec-title_title">Features</div>
-            <h2 class="sec-title_heading">Our Features</h2>
+            <div class="sec-title_title">Secteurs</div>
+            <h2 class="sec-title_heading">Secteurs Présents</h2>
         </div>
         <div class="row clearfix">
-            
+
             <!-- Event Feature Block -->
             <div class="event-feature-block col-lg-4 col-md-6 col-sm-12" *ngFor="let feature of features">
                 <div class="inner-box">
@@ -22,13 +22,13 @@
                   <div class="icon-box">
                     <span class="icon"><img [src]="feature.icon" [alt]="feature.title" /></span>
                   </div>
-                  <h4><a href="event-details/{{ feature.slug }}">{{ feature.title }}</a></h4>
+                  <h4><a href="#">{{ feature.title }}</a></h4>
                   <div class="text">{{ feature.description }}</div>
                 </div>
             </div>
-            
+
         </div>
-        
+
     </div>
 </section>
 <!-- End Event Feature Section-->

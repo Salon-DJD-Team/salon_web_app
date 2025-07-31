@@ -44,13 +44,13 @@
 
 **********************************************/
 
-/* 
+/*
 
 	font-family: 'Manrope', sans-serif;
-	
+
 */
 
-/*** 
+/***
 
 ====================================================================
 	Root Code Variables
@@ -65,19 +65,25 @@
 /* Theme Color */
 
 :root {
-	
+
 	/* #ffc300 in decimal RGB */
 	--main-color: rgb(255,195,0);
 	--main-color-rgb:255,195,0;
-	
+
+  --main-color-bis: #0077B5;
+	--main-color-bis-rgb:0,119,181;
+
 	/* #1a1719 in decimal RGB */
 	--color-two: rgb(26,23,25);
 	--color-two-rgb:26,23,25;
-	
+
 	/* #e00e7a in decimal RGB */
 	--color-three: rgb(224,14,122);
 	--color-three-rgb:224,14,122;
-	
+
+  --color-three-bis: #0077B5;
+  --color-three-bis-rgb:0,119,181;
+
 	/* #2a00ff in decimal RGB */
 	--color-four: rgb(42,0,255);
 	--color-four-rgb:42,0,255;
@@ -89,7 +95,7 @@
 	/* #1967ea in decimal RGB */
 	--color-six: rgb(25,103,234);
 	--color-six-rgb:25,103,234;
-	
+
 	/* #f5f5f5 in decimal RGB */
 	--color-seven: rgb(245,245,245);
 	--color-seven-rgb:245,245,245;
@@ -97,11 +103,11 @@
 	/* #0e0058 in decimal RGB */
 	--color-eight: rgb(14,0,88);
 	--color-eight-rgb:14,0,88;
-	
+
 	/* #150082 in decimal RGB */
 	--color-nine: rgb(21,0,130);
 	--color-nine-rgb:21,0,130;
-	
+
 	/* #ebebeb in decimal RGB */
 	--color-ten: rgb(235,235,235);
 	--color-ten-rgb:235,235,235;
@@ -114,7 +120,7 @@
 	--color-twelve: rgb(248,248,248);
 	--color-twelve-rgb:248,248,248;
 
-  
+
 	/* #ffffff in decimal RGB */
 	--white-color:rgb(255,255,255);
 	--white-color-rgb:255,255,255;
@@ -122,13 +128,13 @@
 	/* #000000 in decimal RGB */
 	--black-color:rgb(0,0,0);
 	--black-color-rgb:0,0,0;
-  
+
 	/* Fonts */
 	--font-family-Manrope: 'Manrope', sans-serif;
-  
-	
+
+
 /* Heading Fonts */
-  
+
   --font-10: 10px;
   --font-12: 12px;
   --font-13: 13px;
@@ -172,13 +178,13 @@
   --font-120: 120px;
   --font-150: 150px;
   --font-200: 200px;
-  
+
 
 
 
 
   --margin-zero: 0px;
-  
+
   /* Margin Left Variables */
   --margin-left-5: 5px;
   --margin-left-10: 10px;
@@ -202,7 +208,7 @@
   --margin-left-100: 100px;
   --margin-left-120: 120px;
   --margin-left-150: 150px;
-  
+
   /* Margin Top Variables */
   --margin-top-5: 5px;
   --margin-top-10: 10px;
@@ -228,7 +234,7 @@
   --margin-top-120: 120px;
   --margin-top-140: 140px;
   --margin-top-150: 150px;
-  
+
   /* Margin Right Variables */
   --margin-right-5: 5px;
   --margin-right-10: 10px;
@@ -251,7 +257,7 @@
   --margin-right-95: 95px;
   --margin-right-100: 100px;
   --margin-right-110: 110px;
-  
+
   /* Margin Bottom Variables */
   --margin-bottom-5: 5px;
   --margin-bottom-10: 10px;
@@ -276,10 +282,10 @@
   --margin-bottom-130: 130px;
   --margin-bottom-150: 150px;
   --margin-bottom-200: 200px;
-  
-  
+
+
   --padding-zero: 0px;
-  
+
   /* Padding Left Variables */
   --padding-left-5: 5px;
   --padding-left-10: 10px;
@@ -314,7 +320,7 @@
   --padding-left-200: 200px;
   --padding-left-240: 240px;
   --padding-left-290: 290px;
-  
+
   /* Padding Top Variables */
   --padding-top-5: 5px;
   --padding-top-10: 10px;
@@ -346,7 +352,7 @@
   --padding-top-160: 160px;
   --padding-top-200: 200px;
   --padding-top-250: 250px;
-  
+
   /* Padding Right Variables */
   --padding-right-5: 5px;
   --padding-right-10: 10px;
@@ -379,7 +385,7 @@
   --padding-right-240: 240px;
   --padding-right-250: 250px;
   --padding-right-260: 260px;
-  
+
   /* Padding Bottom Variables */
   --padding-bottom-5: 5px;
   --padding-bottom-10: 10px;
@@ -410,14 +416,14 @@
 
 }
 
-/*** 
+/***
 
 ====================================================================
 	Reset
 ====================================================================
 
  ***/
- 
+
 * {
 	margin:0px;
 	padding:0px;
@@ -425,7 +431,7 @@
 	outline:none;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Global Settings
@@ -461,14 +467,14 @@ body {
 	color:var(--text-color);
 	line-height:1.6em;
 	font-weight:400;
-	
+
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
 }
 
 /* Preloader */
 
-.preloader{ 
+.preloader{
 	position:fixed;
 	left:0px;
 	top:0px;
@@ -480,7 +486,7 @@ body {
 	background-repeat:no-repeat;
 	background-image:url(/assets/images/icons/preloader.gif);
 	background-size:220px;
-	
+
 }
 
 .bordered-layout .page-wrapper{
@@ -513,7 +519,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 input,button,select,textarea{
-	
+
 }
 
 textarea{
@@ -590,7 +596,7 @@ h6{
 ul,li{
 	list-style:none;
 	padding:0px;
-	margin:0px;	
+	margin:0px;
 }
 
 img{
@@ -609,7 +615,7 @@ img{
 }
 
 .centered{
-	text-align:center;	
+	text-align:center;
 }
 
 ::-webkit-input-placeholder{color: inherit;}
@@ -728,7 +734,7 @@ img{
 
 /* Btn Style One */
 
-.btn-style-one{ 
+.btn-style-one{
 	position: relative;
 	font-weight:700;
 	overflow: hidden;
@@ -798,7 +804,7 @@ img{
 
 .btn-style-one:hover .btn-wrap .text-two{
 	top: 50%;
-    -webkit-transform: translateY(-50%); 
+    -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -808,7 +814,7 @@ img{
 }
 
 .btn-style-one:hover{
-	
+
 }
 
 .btn-style-one:hover:before{
@@ -887,7 +893,7 @@ img{
 
 .btn-style-two:hover .btn-wrap .text-two{
 	top: 50%;
-    -webkit-transform: translateY(-50%); 
+    -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -897,7 +903,7 @@ img{
 }
 
 .btn-style-two:hover{
-	
+
 }
 
 .btn-style-two:hover:before{
@@ -918,7 +924,7 @@ img{
 	color: var(--white-color);
 	font-size: var(--font-12);
 	text-transform: uppercase;
-	background-color: var(--main-color);
+	background-color: var(--color-three-bis);
 }
 
 .btn-style-three:before{
@@ -952,7 +958,7 @@ img{
 .btn-style-three .btn-wrap .text-one{
 	position: relative;
 	display: block;
-	color: var(--color-two);
+	color: var(--white-color);
 	transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
 	-webkit-transition: all 0.3s ease;
@@ -976,7 +982,7 @@ img{
 
 .btn-style-three:hover .btn-wrap .text-two{
 	top: 50%;
-    -webkit-transform: translateY(-50%); 
+    -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -986,7 +992,7 @@ img{
 }
 
 .btn-style-three:hover{
-	
+
 }
 
 .btn-style-three:hover:before{
@@ -996,10 +1002,10 @@ img{
 img{
 	display:inline-block;
 	max-width:100%;
-	height:auto;	
+	height:auto;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Section Title
@@ -1018,7 +1024,7 @@ img{
 	letter-spacing:1px;
 	color:var(--color-three);
 	font-size:var(--font-16);
-	text-transform:uppercase; 
+	text-transform:uppercase;
 	margin-bottom:var(--margin-bottom-20);
 }
 
@@ -1066,7 +1072,7 @@ img{
 	position:relative;
 	top:12px;
 	text-indent:0px;
-	color:#a5a5a5;	
+	color:#a5a5a5;
 }
 
 .form-group .ui-button .ui-icon:before{
@@ -1091,7 +1097,7 @@ img{
 }
 
 .ui-menu .ui-menu-item:last-child{
-	border:none;	
+	border:none;
 }
 
 .ui-state-active, .ui-widget-content .ui-state-active{

@@ -22,23 +22,23 @@ export class FactsCounterV1Component implements AfterViewInit {
 
   facts = [
     {
-      title: "Speakers",
-      counter: "124",
+      title: "Grands Employeurs",
+      counter: "70",
       suffix: '+',
     },
     {
-      title: "Attendence",
-      counter: "1140",
+      title: "Participants",
+      counter: "10 000",
       suffix: '',
     },
     {
-      title: "Workshops",
-      counter: "8",
-      suffix: 'HR',
+      title: "De panel avec des Experts",
+      counter: "40",
+      suffix: 'h',
     },
     {
-      title: "Guests",
-      counter: "205",
+      title: "Emplois et stages à pourvoir",
+      counter: "3000",
       suffix: '+',
     },
   ];
