@@ -20,8 +20,8 @@ import { ServicesV1Component } from "../../components/services-v1/services-v1.co
     FeaturesV2Component,
     EventsV5Component,
     RegisterNowV1Component,
-    PricePlanV4Component,
-    TeamsV4Component,
+    // PricePlanV4Component,
+    // TeamsV4Component,
     CtaV1Component,
     BlogsV1Component,
     ServicesV1Component

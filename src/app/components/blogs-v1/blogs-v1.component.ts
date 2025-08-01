@@ -11,7 +11,7 @@ export class BlogsV1Component {
   articles = [
     {
       id: 1,
-      title: "International Conference on Art Business",
+      title: "How to successed in the digital world",
       date: "2024-05-02",
       author: "Christine",
       comments: 3,
@@ -21,24 +21,14 @@ export class BlogsV1Component {
     },
     {
       id: 2,
-      title: "Unique Digital Ideas to Learn Business",
+      title: "What is a job dating event?",
       date: "2024-05-02",
       author: "Christine",
       comments: 3,
       image: "assets/images/resource/news-2.jpg",
       category: "Event",
       slug: "unique-digital-ideas-to-learn-business"
-    },
-    {
-      id: 3,
-      title: "Houston Event Planning Management",
-      date: "2024-05-02",
-      author: "Christine",
-      comments: 3,
-      image: "assets/images/resource/news-3.jpg",
-      category: "Event",
-      slug: "houston-event-planning-management"
     }
   ];
-  
+
 }
