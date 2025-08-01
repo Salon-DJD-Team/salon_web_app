@@ -11,7 +11,7 @@ export class BlogsV1Component {
   articles = [
     {
       id: 1,
-      title: "How to successed in the digital world",
+      title: "How to succeed in the digital world",
       date: "2024-05-02",
       author: "Christine",
       comments: 3,
