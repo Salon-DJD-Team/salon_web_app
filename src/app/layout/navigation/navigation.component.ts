@@ -5,7 +5,7 @@ interface MenuItem {
   label: string;
   href?: string;
   children?: MenuItem[];
-  go?: () => void | undefined;
+  go?: () => void;
 }
 
 @Component({
