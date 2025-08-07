@@ -1022,7 +1022,7 @@ img{
 	position: relative;
     font-weight: 700;
 	letter-spacing:1px;
-	color:var(--color-three);
+	color:var(--main-color-bis);
 	font-size:var(--font-16);
 	text-transform:uppercase;
 	margin-bottom:var(--margin-bottom-20);
