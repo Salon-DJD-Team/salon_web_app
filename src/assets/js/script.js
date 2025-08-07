@@ -74,7 +74,6 @@ function submenu_dropdown()
 function mobile_menu()
 {
 	var mobileMenuContent = jQuery('.main-header .nav-outer .main-menu').html();
-  alert("s");
 	jQuery('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent);
 	jQuery('.sticky-header .main-menu').append(mobileMenuContent);
 
