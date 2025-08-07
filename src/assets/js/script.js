@@ -13,7 +13,7 @@ function headerStyle() {
 		var windowpos = jQuery(window).scrollTop();
 		var siteHeader = jQuery('.main-header');
 		var scrollLink = jQuery('.scroll-to-top');
-		
+
 		var HeaderHight = jQuery('.main-header').height();
 		if (windowpos >= HeaderHight) {
 			siteHeader.addClass('fixed-header');
@@ -22,7 +22,7 @@ function headerStyle() {
 			siteHeader.removeClass('fixed-header');
 			scrollLink.fadeOut(300);
 		}
-		
+
 	}
 }
 
@@ -31,42 +31,42 @@ function headerStyle() {
 function submenu_dropdown()
 {
 	jQuery('.main-header li.dropdown').append('<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div>');
-	
+
 	//Dropdown Button
 	jQuery('.main-header li.dropdown .dropdown-btn').on('click', function() {
 		jQuery(this).prev('ul').slideToggle(500);
 	});
-	
+
 	//Disable dropdown parent link
 	jQuery('.navigation li.dropdown > a').on('click', function(e) {
 		e.preventDefault();
 	});
-	
+
 	//Disable dropdown parent link
 	jQuery('.main-header .navigation li.dropdown > a,.hidden-bar .side-menu li.dropdown > a').on('click', function(e) {
 		e.preventDefault();
 	});
-	
+
 	jQuery('.hamburger').on('click', function(e) {
 		jQuery('.about-sidebar').addClass('active');
 	});
-	
+
 	jQuery('.about-sidebar .close-button').on('click', function(e) {
 		jQuery('.about-sidebar').removeClass('active');
 	});
-	
+
 	jQuery('.about-sidebar .gradient-layer').on('click', function(e) {
 		jQuery('.about-sidebar').removeClass('active');
 	});
-	
+
 	jQuery('.xs-sidebar-group .close-button').on('click', function(e) {
 		jQuery('.xs-sidebar-group.info-group').removeClass('isActive');
 	});
-	
+
 	jQuery('.newsletter-close-btn').on('click', function(e) {
 		jQuery('.quickview-popup-area-section').removeClass('active');
 	});
-	
+
 }
 
 
@@ -76,12 +76,12 @@ function mobile_menu()
 	var mobileMenuContent = jQuery('.main-header .nav-outer .main-menu').html();
 	jQuery('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent);
 	jQuery('.sticky-header .main-menu').append(mobileMenuContent);
-	
+
 	//Hide / Show Submenu
 	jQuery('.mobile-menu .navigation > li.dropdown > .dropdown-btn').on('click', function(e) {
 		e.preventDefault();
 		var target = jQuery(this).parent('li').children('ul');
-		
+
 		if (jQuery(target).is(':visible')){
 			jQuery(this).parent('li').removeClass('open');
 			jQuery(target).slideUp(500);
@@ -100,7 +100,7 @@ function mobile_menu()
 	jQuery('.mobile-menu .navigation > li.dropdown > ul  > li.dropdown > .dropdown-btn').on('click', function(e) {
 		e.preventDefault();
 		var targetInner = jQuery(this).parent('li').children('ul');
-		
+
 		if (jQuery(targetInner).is(':visible')){
 			jQuery(this).parent('li').removeClass('open');
 			jQuery(targetInner).slideUp(500);
@@ -135,7 +135,7 @@ function mobile_menu()
 		jQuery('.mobile-menu .navigation li ul').slideUp(0);
 		}
 	});
-	
+
 }
 
 
@@ -180,10 +180,10 @@ function custom_scroll()
 function proller()
 {
 	jQuery('.paroller').paroller({
-			factor: 0.2,            // multiplier for scrolling speed and offset, +- values for direction control  
-			factorLg: 0.4,          // multiplier for scrolling speed and offset if window width is less than 1200px, +- values for direction control  
-			type: 'foreground',     // background, foreground  
-			direction: 'horizontal' // vertical, horizontal  
+			factor: 0.2,            // multiplier for scrolling speed and offset, +- values for direction control
+			factorLg: 0.4,          // multiplier for scrolling speed and offset if window width is less than 1200px, +- values for direction control
+			type: 'foreground',     // background, foreground
+			direction: 'horizontal' // vertical, horizontal
 	});
 }
 
@@ -325,7 +325,7 @@ function two_item_carousel() {
 				items:2
 			}
 		}
-	});    		
+	});
 }
 
 
@@ -356,7 +356,7 @@ function gallery_carousel() {
 				items:4
 			}
 		}
-	});    		
+	});
 }
 
 
@@ -366,7 +366,7 @@ function tab_box()
 	jQuery('.tabs-box .tab-buttons .tab-btn').on('click', function(e) {
 		e.preventDefault();
 		var target = jQuery(jQuery(this).attr('data-tab'));
-		
+
 		if (jQuery(target).is(':visible')){
 			return false;
 		}else{
@@ -446,7 +446,7 @@ function newsletterPopup()
 	if(localValue === "true") {
 		newsletter.css({
 			"display": "none"
-		});                
+		});
 	}
 
 	newsletter.addClass("active-newsletter-popup");
@@ -475,7 +475,7 @@ When document is loading, do
 
 jQuery(window).on('load', function() {
 	preloader();
-	
+
 	// Newsletter PoPup
 	if(jQuery(".newsletter-popup-area-section").length) {
 		setTimeout(function() {
@@ -485,4 +485,4 @@ jQuery(window).on('load', function() {
 	if(jQuery(".cookies-area").length) {
 		cookiesClose();
 	}
-});	
+});
