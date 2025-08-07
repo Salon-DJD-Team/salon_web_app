@@ -1,0 +1,51 @@
+<section id="home" class="slider-one">
+  <div class="slider-one_pattern-two" style="background-image:url('/assets/images/main-slider/pattern-2.png')"></div>
+
+  	<!-- Slider One -->
+	<section class="slider-one">
+		<div class="slider-one_pattern-two" style="background-image:url(assets/images/main-slider/pattern-2.png)"></div>
+		<div class="main-slider-carousel owl-carousel owl-theme">
+
+			<!-- Slide 01 -->
+			<div class="slider-one_slide" *ngFor="let slide of slides">
+				<div class="slider-one_image-layer" [style.backgroundImage]="'url(' + slide.image + ')'"></div>
+				<div class="slider-one_pattern" style="background-image:url('/assets/images/main-slider/pattern-1.png')"></div>
+				<div class="auto-container">
+					<!-- Content Column -->
+					<div class="slider-one_content">
+						<div class="slider-one_content-inner">
+							<div class="slider-one_title">{{ slide.location }}</div>
+							<div class="slider-one_date"><span>{{ slide.date | date: 'dd' }}</span> {{ slide.date | date: 'MMMM' }} <br> {{ slide.date | date: 'yyyy' }}</div>
+							<h1 class="slider-one_heading">{{ slide.title }}</h1>
+							<div class="slider-one_buttons">
+								<!-- <a href="{{ slide.button_link }}" class="theme-btn btn-style-one">
+									<span class="btn-wrap">
+										<span class="text-one">{{ slide.button_name }}</span>
+										<span class="text-two">{{ slide.button_name }}</span>
+									</span>
+								</a> -->
+                <div class="btns-box">
+                    <a (click)="scrollToSection('registerJobSeeker')" class="theme-btn btn-style-three">
+                        <span class="btn-wrap flex! justify-center">
+                            <span class="text-one">Vous êtes candidat</span>
+                            <span class="text-two">Participez</span>
+                        </span>
+                    </a>
+                    <a (click)="scrollToSection('registerBusiness')" class="theme-btn btn-style-three">
+                        <span class="btn-wrap flex! justify-center">
+                            <span class="text-one">Vous êtes employeur</span>
+                            <span class="text-two">Participez</span>
+                        </span>
+                    </a>
+                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Slide 01 -->
+
+		</div>
+	</section>
+	<!-- End Main Slider Section -->
+</section>

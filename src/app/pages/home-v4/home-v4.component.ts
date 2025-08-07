@@ -8,8 +8,11 @@ import { TeamsV4Component } from '../../components/teams-v4/teams-v4.component';
 import { CtaV1Component } from '../../components/cta-v1/cta-v1.component';
 import { BlogsV1Component } from '../../components/blogs-v1/blogs-v1.component';
 import { SliderV4Component } from '../../components/slider-v4/slider-v4.component';
-import { AboutUsV4Component } from '../../components/slider-v4/about-us-v4/about-us-v4.component';
+import { AboutUsV4Component } from '../../components/about-us-v4/about-us-v4.component';
 import { ServicesV1Component } from "../../components/services-v1/services-v1.component";
+import { ContactInfoV1Component } from "../../components/contact-info-v1/contact-info-v1.component";
+import { SliderV1Component } from "../../components/slider-v1/slider-v1.component";
+import { PartnersV1Component } from "../../components/partners-v1/partners-v1.component";
 
 @Component({
   selector: 'app-home-v4',
@@ -24,7 +27,10 @@ import { ServicesV1Component } from "../../components/services-v1/services-v1.co
     // TeamsV4Component,
     CtaV1Component,
     BlogsV1Component,
-    ServicesV1Component
+    ServicesV1Component,
+    ContactInfoV1Component,
+    SliderV1Component,
+    PartnersV1Component
 ],
   templateUrl: './home-v4.component.html',
 })

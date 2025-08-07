@@ -316,10 +316,10 @@
 .about-one_image{
 	position: relative;
 	overflow: hidden;
-	border-radius: 50%;
+	border-radius: 20px;
 	margin-left: -110px;
 	display: inline-block;
-	border: 15px solid var(--color-four);
+	/* border: 15px solid var(--color-four); */
 }
 
 .about-one_pattern-four{
@@ -3704,7 +3704,7 @@
 	right: -1px;
 	bottom: -1px;
 	opacity: 0;
-	background-color: var(--color-three);
+	background-color: var(--main-color-bis);
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
@@ -9826,7 +9826,7 @@ blockquote{
 	text-align:center;
 	line-height:60px;
 	font-family: "Flaticon";
-	background-color:#ff3abd;
+	background-color:var(--main-color-bis);
 }
 
 .about-event-block .block-inner h5{
@@ -9912,7 +9912,7 @@ blockquote{
 	height:100%;
 	opacity:0;
 	transform:scale(1,0.2);
-	background-color:#ff00aa;
+	background-color:var(--main-color-bis);
 	-webkit-transition:all 600ms ease;
 	-moz-transition:all 600ms ease;
 	-ms-transition:all 600ms ease;
@@ -9933,7 +9933,7 @@ blockquote{
 	height:100%;
 	opacity:0;
 	transform:scale(1,0.2);
-	background-color:#ff00aa;
+	background-color:var(--main-color-bis);
 	-webkit-transition:all 600ms ease;
 	-moz-transition:all 600ms ease;
 	-ms-transition:all 600ms ease;
@@ -9954,7 +9954,7 @@ blockquote{
 	height:2px;
 	opacity:0;
 	transform:scale(0.2,1);
-	background-color:#ff00aa;
+	background-color:var(--main-color-bis);
 	-webkit-transition:all 600ms ease;
 	-moz-transition:all 600ms ease;
 	-ms-transition:all 600ms ease;
@@ -9975,7 +9975,7 @@ blockquote{
 	height:2px;
 	opacity:0;
 	transform:scale(0.2,1);
-	background-color:#ff00aa;
+	background-color:var(--main-color-bis);
 	-webkit-transition:all 600ms ease;
 	-moz-transition:all 600ms ease;
 	-ms-transition:all 600ms ease;
@@ -10012,7 +10012,7 @@ blockquote{
 }
 
 .event-feature-block .inner-box h4 a:hover{
-	color:#ff00aa;
+	color:var(--main-color-bis);
 }
 
 .event-feature-block .inner-box .text{
@@ -10153,11 +10153,11 @@ blockquote{
 }
 
 .schedule-tabs .tab-buttons li:nth-child(4n + 1) .day{
-	background-color: #0048ff;
+	background-color: #0077B5;
 }
 
 .schedule-tabs .tab-buttons li:nth-child(4n + 2) .day{
-	background-color: #40cbb4;
+	background-color: #6db6f2;
 }
 
 .schedule-tabs .tab-buttons li:nth-child(4n + 3) .day{
