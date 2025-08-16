@@ -1,50 +1,76 @@
 <!-- Events About Section -->
 <section id="about" class="events-about-section">
-    <div class="auto-container">
-        <div class="row clearfix">
-
-            <!-- Image Column -->
-            <div class="about-one_image-column col-lg-6 col-md-12 col-sm-12">
-                <div class="about-one_image-inner">
-                    <div class="about-one_pattern-four" style="background-image:url(assets/images/background/about-pattern.png)"></div>
-                    <div class="about-one_image wow rollIn">
-                        <!-- <img src="assets/images/resource/about.jpg" alt="" /> -->
-                        <iframe width="531" height="531" src="./Corporate Event Highlights Video _ Digital Masters Awards 2019 _ 4K.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <!-- <div class="lightbox-video slider-one_play" (click)="displayVideo()">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <!-- Image Column -->
+      <div class="about-one_image-column col-lg-6 col-md-12 col-sm-12">
+        <div class="about-one_image-inner">
+          <div
+            class="about-one_pattern-four"
+            style="
+              background-image: url(assets/images/background/about-pattern.png);
+            "
+          ></div>
+          <div class="about-one_image wow rollIn">
+            <!-- <img src="assets/images/resource/about.jpg" alt="" /> -->
+            <iframe
+              width="531"
+              height="531"
+              src="./Corporate Event Highlights Video _ Digital Masters Awards 2019 _ 4K.mp4"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <!-- <div class="lightbox-video slider-one_play" (click)="displayVideo()">
                       <span class="fa fa-play"><i class="ripple"></i></span>
                     </div> -->
-                </div>
-            </div>
+        </div>
+      </div>
 
-            <!-- Content Column -->
-            <div class="content-column col-lg-6 col-md-12 col-sm-12">
-                <div class="inner-column">
-                    <div class="sec-title title-anim">
-                        <div class="sec-title_title">A propos de l'événement</div>
-                        <h2 class="sec-title_heading">Salon Dakar Job Dating <br> Edition 2025</h2>
-                        <div class="sec-title_text">Lorem ipsum gravida nibh vel velit auctor aliquetnean sollicitudin, lorem quis Bibendum auci elit consequat ipsutis sem nibh id elit</div>
-                    </div>
-                    <div class="row clearfix">
-                        <!-- About Event Block -->
-                        <div class="about-event-block col-lg-6 col-md-6 col-sm-12">
-                            <div class="block-inner">
-                                <span class="icon-box flaticon-maps-and-flags"></span>
-                                <h5>Lieu</h5>
-                                <div class="about-text">Grand Théâtre de Dakar, <br> Dakar / Sénégal</div>
-                            </div>
-                        </div>
-                        <!-- About Event Block -->
-                        <div class="about-event-block col-lg-6 col-md-6 col-sm-12">
-                            <div class="block-inner">
-                                <span class="icon-box flaticon-call-1"></span>
-                                <h5>Quand</h5>
-                                <div class="about-text">Mercredi et Jeudi <br> 17 et 18 décembre 2025</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Btn Box -->
-                    <!-- <div class="btn-box">
+      <!-- Content Column -->
+      <div class="content-column col-lg-6 col-md-12 col-sm-12">
+        <div class="inner-column">
+          <div class="sec-title title-anim">
+            <div class="sec-title_title">A propos de l'événement</div>
+            <h2 class="sec-title_heading">
+              Salon Dakar Job Dating <br />
+              Edition 2025
+            </h2>
+            <div class="sec-title_text">
+              Lorem ipsum gravida nibh vel velit auctor aliquetnean
+              sollicitudin, lorem quis Bibendum auci elit consequat ipsutis sem
+              nibh id elit
+            </div>
+          </div>
+          <div class="row clearfix">
+            <!-- About Event Block -->
+            <div class="about-event-block col-lg-6 col-md-6 col-sm-12">
+              <div class="block-inner">
+                <span class="icon-box flaticon-maps-and-flags"></span>
+                <h5>Lieu</h5>
+                <div class="about-text">
+                  Grand Théâtre de Dakar, <br />
+                  Dakar / Sénégal
+                </div>
+              </div>
+            </div>
+            <!-- About Event Block -->
+            <div class="about-event-block col-lg-6 col-md-6 col-sm-12">
+              <div class="block-inner">
+                <span class="icon-box flaticon-call-1"></span>
+                <h5>Quand</h5>
+                <div class="about-text">
+                  Mercredi et Jeudi <br />
+                  17 et 18 décembre 2025
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Btn Box -->
+          <!-- <div class="btn-box">
                         <a href="contact-us-01" class="theme-btn btn-style-two">
                             <span class="btn-wrap">
                                 <span class="text-one">Buy Ticket</span>
@@ -52,10 +78,38 @@
                             </span>
                         </a>
                     </div> -->
-                </div>
-            </div>
-
         </div>
+      </div>
     </div>
+    <!-- <div class="row clearfix">
+      <p-carousel
+        [value]="slides"
+        [numVisible]="3"
+        [numScroll]="1"
+        [circular]="true"
+        [responsiveOptions]="responsiveOptions"
+        [autoplayInterval]="3000"
+      >
+        <ng-template let-product #item>
+          <div
+            class=" border-surface-200 dark:border-surface-700 rounded m-2 p-4"
+          >
+            <div class="mb-4">
+              <div class="relative mx-auto">
+                <img
+                  [src]="product.image"
+                  [alt]="product.title"
+                  class="w-full rounded-border"
+                />
+
+              </div>
+            </div>
+            <div class="mb-4 font-medium">{{ product.title }}</div>
+
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div> -->
+  </div>
 </section>
 <!-- End Events About Section -->

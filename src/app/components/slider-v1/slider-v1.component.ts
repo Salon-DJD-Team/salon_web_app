@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 declare var jQuery: any;
 declare var main_slider: any;
-
+declare var time_countdown: any;
 @Component({
   selector: 'app-slider-v1',
   imports: [CommonModule],
@@ -15,6 +15,7 @@ export class SliderV1Component implements AfterViewInit {
 	(function ($) {
 		setTimeout(function(){
 			main_slider();
+      time_countdown();
 		  }, 100);
 	  })(jQuery);
   }
