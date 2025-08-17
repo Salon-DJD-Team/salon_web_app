@@ -18,7 +18,7 @@ export class SliderV4Component implements AfterViewInit {
 		setTimeout(function(){
 			main_slider();
 			parallax_1();
-			parallax_2();
+			// parallax_2();
 			time_countdown();
 		  }, 100);
 	  })(jQuery);
