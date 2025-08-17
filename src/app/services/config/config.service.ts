@@ -9,7 +9,7 @@ import { AppConfigModel } from '../../models/appConfig.model';
 export class ConfigService {
   private config: AppConfigModel = (window as any).config as AppConfigModel;
   constructor(private http: HttpClient) {
-    console.log('ConfigService initialized', this.config);
+    
   }
 
 
