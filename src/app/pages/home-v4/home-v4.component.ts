@@ -35,5 +35,4 @@ import { PartnersV1Component } from "../../components/partners-v1/partners-v1.co
   templateUrl: './home-v4.component.html',
 })
 export class HomeV4Component {
-
 }

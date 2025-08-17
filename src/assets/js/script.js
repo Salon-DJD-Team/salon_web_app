@@ -217,7 +217,7 @@ function time_countdown()
 	jQuery('.time-countdown').each(function() {
 		var count = jQuery(this), finalDate = jQuery(this).data('countdown');
 		count.countdown(finalDate, function(event) {
-			var jQuerythis = jQuery(this).html(event.strftime('' + '<div class="counter-column"><span class="count">%D</span>Days</div> ' + '<div class="counter-column"><span class="count">%H</span>Hours</div>  ' + '<div class="counter-column"><span class="count">%M</span>Minutes</div>  ' + '<div class="counter-column"><span class="count">%S</span>Seconds</div>'));
+			var jQuerythis = jQuery(this).html(event.strftime('' + '<div class="counter-column"><span class="count">%D</span>Jours</div> ' + '<div class="counter-column"><span class="count">%H</span>Heures</div>  ' + '<div class="counter-column"><span class="count">%M</span>Minutes</div>  ' + '<div class="counter-column"><span class="count">%S</span>Secondes</div>'));
 		});
 	});
 }
