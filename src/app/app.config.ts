@@ -17,7 +17,7 @@ import { AppConfigModel } from './models/appConfig.model';
 
 function initializeApp() {
   const http = inject(HttpClient);
-  http
+  return http
     .get('/config/config.json')
     .toPromise()
     .then((config) => {
