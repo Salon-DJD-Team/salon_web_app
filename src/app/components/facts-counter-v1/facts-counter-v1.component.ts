@@ -28,7 +28,7 @@ export class FactsCounterV1Component implements AfterViewInit {
     },
     {
       title: "Participants",
-      counter: "10 000",
+      counter: "10000",
       suffix: '',
     },
     {
