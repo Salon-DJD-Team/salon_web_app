@@ -29,32 +29,7 @@ export class AboutUsV4Component {
     },
   ];
   slides: { image: string; title: string; description: string }[] = [
-    {
-      image:
-        'https://primefaces.org/cdn/primeng/images/demo/product/bamboo-watch.jpg',
-      title: 'Salon Job Dating Dakar 2025',
-      description: 'Description for Salon Job Dating Dakar 2025',
-    },
-    {
-      image:
-        'https://primefaces.org/cdn/primeng/images/demo/product/blue-t-shirt.jpg',
-      title: "Venez découvrir les opportunités d'emploi",
-      description: "Description for Venez découvrir les opportunités d'emploi",
-    },
-    {
-      image:
-        'https://primefaces.org/cdn/primeng/images/demo/product/blue-band.jpg',
-      title: 'Black Watch',
-      description: 'Description for Black Watch',
-    },
-    {
-      image:
-        'https://primefaces.org/cdn/primeng/images/demo/product/bracelet.jpg',
-      title: 'Bracelet',
-      description: 'Description for Bracelet',
-    },
-  slides: { image: string; title: string; description: string }[] = [
-    {
+   {
       image:
         'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80',
       title: 'Rencontres Professionnelles 2025',
