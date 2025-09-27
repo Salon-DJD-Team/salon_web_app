@@ -16,37 +16,70 @@ interface MenuItem {
 export class NavigationComponent implements AfterViewInit {
   menuItems: MenuItem[] = [
     {
-      label: 'Home',
-      href: '#',
-    },
-    {
-      label: 'A propos',
-      href: '#about',
-    },
-    {
-      label: 'Inscriptions',
+      label: 'DJD 2025',
       href: '#',
       children: [
         {
-          label: 'Candidat',
+          label: '4 Espaces Pavillons',
+          href: '#home',
+        },
+        {
+          label: 'HCP',
+          href: '#about',
+        },
+        {
+          label: 'Sponsors & Partenaires',
+          href: '#about',
+        },
+        {
+          label: 'Media Partners',
+          href: '#about',
+        },
+      ],
+    },
+    {
+      label: 'Emploi',
+      href: '#',
+      children: [
+        {
+          label: 'Inscription',
           go: () => {
             this.scrollToSection('registerJobSeeker');
           },
         },
         {
-          label: 'Employeur',
-          go: () => {
-            this.scrollToSection('registerBusiness');
-          },
+          label: 'Sponsors & Employeurs',
+          href: '#sponsors',
+        },
+        {
+          label: 'Programme & Speakers',
+          href: '#program',
         },
       ],
     },
     {
-      label: 'Programme',
-      href: '#program',
+      label: 'Entrepreneuriat',
+      href: '#entrepreneuriat',
+      children: [
+        {
+          label: 'Inscription',
+          go: () => {
+            this.scrollToSection('registerBusiness');
+          },
+        },
+        {
+          label: 'Sponsors & Exposants',
+          href: '#sponsors',
+        },
+        {
+          label: 'Programme & Speakers',
+          href: '#program',
+        },
+
+      ]
     },
     {
-       label: 'Contactez-nous',
+       label: 'Contact',
        href: '#contact',
     },
   ];
