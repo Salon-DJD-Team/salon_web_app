@@ -20,7 +20,9 @@
                   <div class="right-border"></div>
                   <div class="bottom-border"></div>
                   <div class="icon-box">
-                    <span class="icon"><img [src]="feature.icon" [alt]="feature.title" /></span>
+                    <span class="icon">
+                      <i [ngClass]="feature.icon" style="font-size: 40px;"></i>
+                    </span>
                   </div>
                   <h4><a href="#">{{ feature.title }}</a></h4>
                   <!-- <div class="text">{{ feature?.description }}</div> -->
