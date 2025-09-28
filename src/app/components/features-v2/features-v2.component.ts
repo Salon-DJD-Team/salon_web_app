@@ -10,65 +10,71 @@ export class FeaturesV2Component {
 
   features = [
     {
-      icon: 'assets/images/icons/event-icon-1.png',
+      // icon: 'assets/images/icons/event-icon-1.png',
       title: 'AGRO BUSINESS ',
-      slug: 'meet-the-leaders'
+      slug: 'meet-the-leaders',
+      icon: 'fa-solid fa-tractor'
     },
     {
-      icon: 'assets/images/icons/event-icon-2.png',
+      // icon: 'assets/images/icons/event-icon-2.png',
       title: 'INDUSTRIES AGRO.',
-      slug: 'five-days-long'
+      slug: 'five-days-long',
+      icon: 'fa-solid fa-industry'
     },
     {
-      icon: 'assets/images/icons/event-icon-3.png',
+      // icon: 'assets/images/icons/event-icon-3.png',
       title: 'COMMERCE',
-      slug: 'product-launching'
+      slug: 'product-launching',
+      icon: 'fa-solid fa-store'
     },
     {
-      icon: 'assets/images/icons/event-icon-4.png',
+      // icon: 'assets/images/icons/event-icon-4.png',
       title: 'TELECOM & DIGITAL',
-      slug: '37-sponsors'
+      slug: '37-sponsors',
+      icon: 'fa-solid fa-mobile-screen'
     },
     {
-      icon: 'assets/images/icons/event-icon-5.png',
+      // icon: 'assets/images/icons/event-icon-5.png',
       title: 'BTP & CIMENTERIE',
-      slug: '92-countries-attend'
+      slug: '92-countries-attend',
+      icon: 'fa-solid fa-person-digging'
     },
     {
-      icon: 'assets/images/icons/event-icon-6.png',
+      // icon: 'assets/images/icons/event-icon-6.png',
       title: 'BANQUES & ASSURANCES',
-      slug: 'ask-questions'
+      slug: 'ask-questions',
+      icon: 'fa fa-money-bill-transfer'
     },
 
     {
-      icon: 'assets/images/icons/event-icon-1.png',
       title: 'TRANSPORT & LOG.',
-      slug: 'meet-the-leaders'
+      slug: 'meet-the-leaders',
+      icon: 'fa-solid fa-truck'
     },
     {
-      icon: 'assets/images/icons/event-icon-2.png',
       title: 'SANTE & PHARMA',
-      slug: 'five-days-long'
+      slug: 'five-days-long',
+      icon: 'fa-solid fa-capsules'
     },
     {
-      icon: 'assets/images/icons/event-icon-3.png',
       title: 'EAU & ASSAINISSEMENT',
-      slug: 'product-launching'
+      slug: 'product-launching',
+      icon: 'fa-solid fa-faucet'
     },
     {
-      icon: 'assets/images/icons/event-icon-4.png',
       title: 'ENERGIES & MINES ',
-      slug: '37-sponsors'
+      slug: '37-sponsors',
+      icon: 'fa-solid fa-mountain'
     },
     {
-      icon: 'assets/images/icons/event-icon-5.png',
       title: 'HOTELLERIE, RESTAURATION & COMMERCE',
-      slug: '92-countries-attend'
+      slug: '92-countries-attend',
+      icon: 'fa-solid fa-hotel'
     },
     {
-      icon: 'assets/images/icons/event-icon-6.png',
       title: 'SERVICES AUX ENTREPRISES',
-      slug: 'ask-questions'
+      slug: 'ask-questions',
+      icon: 'fa-solid fa-handshake'
     }
   ];
 

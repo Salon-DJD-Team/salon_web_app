@@ -70,8 +70,8 @@
 	--main-color: rgb(255,195,0);
 	--main-color-rgb:255,195,0;
 
-  --main-color-bis: #0077B5;
-	--main-color-bis-rgb:0,119,181;
+  --main-color-bis: #0000FF;
+	--main-color-bis-rgb:0,0,255;
 
 	/* #1a1719 in decimal RGB */
 	--color-two: rgb(26,23,25);
@@ -81,8 +81,8 @@
 	--color-three: rgb(224,14,122);
 	--color-three-rgb:224,14,122;
 
-  --color-three-bis: #0077B5;
-  --color-three-bis-rgb:0,119,181;
+  --color-three-bis: #0000FF;
+  --color-three-bis-rgb:0,0,255;
 
 	/* #2a00ff in decimal RGB */
 	--color-four: rgb(42,0,255);

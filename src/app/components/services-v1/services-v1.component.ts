@@ -12,25 +12,25 @@ export class ServicesV1Component {
     {
       icon: 'flaticon-connection',
       title: 'Espace Institutionnel',
-      description: 'Quisque placerat vitae lacus ut scelerisque. Fusce luctus odio ac nibh luctus, in porttitor.',
+      description: 'Rencontrez les agences et organismes de l’Etat qui œuvrent dans la promotion de l’emploi, des RH et des Métiers (…).',
       slug: 'networking'
     },
     {
       icon: 'flaticon-book',
       title: 'Espace Entrepreneuriat',
-      description: 'Quisque placerat vitae lacus ut scelerisque. Fusce luctus odio ac nibh luctus, in porttitor.',
+      description: 'Retrouvez les plus grandes structures publiques et privées d’appui à l’entrepreneuriat : appui technique, financement, formation, diaspora (…).',
       slug: 'learning'
     },
     {
       icon: 'flaticon-idea',
       title: 'Espace International',
-      description: 'Quisque placerat vitae lacus ut scelerisque. Fusce luctus odio ac nibh luctus, in porttitor.',
+      description: 'Venez échanger avec les grands partenaires internationaux et employeurs de la sous-région pour explorer des perspectives de partenariat (…).',
       slug: 'spark-new-ideas'
     },
      {
       icon: 'flaticon-book',
       title: 'Espace Employeurs',
-      description: 'Quisque placerat vitae lacus ut scelerisque. Fusce luctus odio ac nibh luctus, in porttitor.',
+      description: 'Entrez en contact dans les stands avec les recruteurs et dirigeants des plus grandes entreprises du pays parmi les 10 plus gros secteurs d’activité (…).',
       slug: 'learning'
     },
   ];
