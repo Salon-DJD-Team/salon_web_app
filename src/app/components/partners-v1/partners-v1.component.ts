@@ -9,35 +9,31 @@ import { CommonModule } from '@angular/common';
 export class PartnersV1Component {
   partners = [
     {
-      image: "assets/images/clients/1.png",
+      image: "assets/images/partners/logo-anpej.jpeg",
       url: '#',
     },
     {
-      image: "assets/images/clients/2.png",
+      image: "assets/images/partners/logo-cellule.jpeg",
       url: '#',
     },
     {
-      image: "assets/images/clients/3.png",
+      image: "assets/images/partners/logo-connectic.jpeg",
       url: '#',
     },
     {
-      image: "assets/images/clients/4.png",
+      image: "assets/images/partners/logo-faise.jpeg",
       url: '#',
     },
     {
-      image: "assets/images/clients/5.png",
+      image: "assets/images/partners/logo-ministere-emploi-formation-professionnelle.jpeg",
       url: '#',
     },
     {
-      image: "assets/images/clients/6.png",
+      image: "assets/images/partners/logo-nomade.jpeg",
       url: '#',
     },
     {
-      image: "assets/images/clients/7.png",
-      url: '#',
-    },
-    {
-      image: "assets/images/clients/8.png",
+      image: "assets/images/partners/logo-rts.jpeg",
       url: '#',
     },
   ];
