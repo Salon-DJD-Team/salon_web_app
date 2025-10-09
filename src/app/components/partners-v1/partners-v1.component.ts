@@ -36,5 +36,17 @@ export class PartnersV1Component {
       image: "assets/images/partners/logo-rts.jpeg",
       url: '#',
     },
+    {
+      image: "assets/images/partners/logo_Adepme.jpeg",
+      url: '#',
+    },
+    {
+      image: "assets/images/partners/logo_anamo.jpeg",
+      url: '#',
+    },
+    {
+      image: "assets/images/partners/logo_grand_theatre.jpeg",
+      url: '#',
+    },
   ];
 }

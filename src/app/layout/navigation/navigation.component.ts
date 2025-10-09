@@ -21,7 +21,10 @@ export class NavigationComponent implements AfterViewInit {
       children: [
         {
           label: '4 Espaces Pavillons',
-          href: '#home',
+          href: '#pavillions',
+          go: () => {
+            this.scrollToSection('pavillions');
+          }
         },
         {
           label: 'HCP',
@@ -102,6 +105,8 @@ export class NavigationComponent implements AfterViewInit {
 
   scrollToSection(sectionId: string): void {
     const section = document.getElementById(sectionId);
+    console.log(sectionId, section);
+
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
