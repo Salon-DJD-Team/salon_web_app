@@ -12,14 +12,32 @@ declare var tab_box: any;
 })
 export class EventsV5Component implements AfterViewInit {
   ngAfterViewInit(): void {
-	(function ($) {
-		setTimeout(function(){
-			tab_box();
-		  }, 100);
-	  })(jQuery);
+    (function ($) {
+      setTimeout(function () {
+        tab_box();
+      }, 100);
+    })(jQuery);
   }
 
-  tabs = [
+  tabs: {
+    id: string;
+    day: string;
+    date: string;
+    month: string;
+    year: string;
+    active: boolean;
+    events: {
+      authorImage: string;
+      authorName?: string;
+      authorDesignation: string;
+      eventDate: string;
+      eventTitle: string;
+      eventDescription: string;
+      eventLocation: string;
+      eventTime: string;
+      link: string;
+    }[];
+  }[] = [
     {
       id: 'tab-1',
       day: 'Day 01',
@@ -28,17 +46,17 @@ export class EventsV5Component implements AfterViewInit {
       year: '2025',
       active: true,
       events: [
-        {
-          authorImage: 'assets/images/resource/author-15.png',
-          // authorName: 'John Smith',
-          authorDesignation: '',
-          eventDate: '17 Decembre',
-          eventTitle: '...',
-          eventDescription: 'Lorem ipsum gravida nibh vel velit auctor aliquetnean sollicitudin, lorem quis Bibendum auci elit.',
-          eventLocation: 'Grand Théâtre de Dakar, Dakar/Senegal',
-          eventTime: '17 Decembre 2025, 10:00 AM-6:00 PM',
-          link: 'the-future-of-ux-ui-in-2025'
-        },
+        // {
+        //   authorImage: 'assets/images/resource/author-15.png',
+        //   // authorName: 'John Smith',
+        //   authorDesignation: '',
+        //   eventDate: '17 Decembre',
+        //   eventTitle: '...',
+        //   eventDescription: 'Lorem ipsum gravida nibh vel velit auctor aliquetnean sollicitudin, lorem quis Bibendum auci elit.',
+        //   eventLocation: 'Grand Théâtre de Dakar, Dakar/Senegal',
+        //   eventTime: '17 Decembre 2025, 10:00 AM-6:00 PM',
+        //   link: 'the-future-of-ux-ui-in-2025'
+        // },
         // {
         //   authorImage: 'assets/images/resource/author-16.png',
         //   authorName: 'William Sam',
@@ -61,7 +79,7 @@ export class EventsV5Component implements AfterViewInit {
         //   eventTime: '14 April 2025, 10:00 AM-6:00 PM',
         //   link: 'launch-of-dintalk-a-social-media-app'
         // }
-      ]
+      ],
     },
     {
       id: 'tab-2',
@@ -71,30 +89,30 @@ export class EventsV5Component implements AfterViewInit {
       year: '2025',
       active: false,
       events: [
-        {
-          authorImage: 'assets/images/resource/author-15.png',
-          // authorName: 'Sarah Johnson',
-          authorDesignation: '...',
-          eventDate: '18 Decembre',
-          eventTitle: '...',
-          eventDescription: '...',
-          eventLocation: 'Grand Théâtre de Dakar, Dakar/Senegal',
-          eventTime: '18 Decembre 2025, 9:00 AM-5:00 PM',
-          link: 'big-data-analytics-workshop'
-        },
-        {
-          authorImage: 'assets/images/resource/author-16.png',
-          authorName: '...',
-          authorDesignation: '...',
-          eventDate: '18 Decembre',
-          eventTitle: '...',
-          eventDescription: '...',
-          eventLocation: 'Grand Théâtre de Dakar, Dakar/Senegal',
-          eventTime: '18 Decembre 2025, 11:00 AM-1:00 PM',
-          link: 'cloud-native-applications'
-        },
-      ]
-    }
+        // {
+        //   authorImage: 'assets/images/resource/author-15.png',
+        //   // authorName: 'Sarah Johnson',
+        //   authorDesignation: '...',
+        //   eventDate: '18 Decembre',
+        //   eventTitle: '...',
+        //   eventDescription: '...',
+        //   eventLocation: 'Grand Théâtre de Dakar, Dakar/Senegal',
+        //   eventTime: '18 Decembre 2025, 9:00 AM-5:00 PM',
+        //   link: 'big-data-analytics-workshop'
+        // },
+        // {
+        //   authorImage: 'assets/images/resource/author-16.png',
+        //   authorName: '...',
+        //   authorDesignation: '...',
+        //   eventDate: '18 Decembre',
+        //   eventTitle: '...',
+        //   eventDescription: '...',
+        //   eventLocation: 'Grand Théâtre de Dakar, Dakar/Senegal',
+        //   eventTime: '18 Decembre 2025, 11:00 AM-1:00 PM',
+        //   link: 'cloud-native-applications'
+        // },
+      ],
+    },
   ];
 
   activeTab = this.tabs[0].id;
