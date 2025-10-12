@@ -1,4 +1,5 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, input } from '@angular/core';
+import { StrapiHomepageModel } from '../../models/strapi.content.model';
 
 declare var jQuery: any;
 declare var main_slider: any;
@@ -12,7 +13,7 @@ declare var time_countdown: any;
   templateUrl: './slider-v4.component.html',
 })
 export class SliderV4Component implements AfterViewInit {
-
+  content = input<StrapiHomepageModel | null>();
 	ngAfterViewInit(): void {
 	(function ($) {
 		setTimeout(function(){

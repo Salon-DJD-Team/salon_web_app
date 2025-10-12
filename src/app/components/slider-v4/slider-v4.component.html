@@ -93,9 +93,9 @@
     <!-- Content Boxed -->
     <div class="content-boxed">
       <div class="inner-column">
-        <h2>Salon International</h2>
+        <h2> {{ content()?.data?.title || 'Salon International' }} </h2>
         <br />
-        <h1>Dakar Job Dating Edition 2025</h1>
+        <h1> {{ content()?.data?.subtitle || 'Dakar Job Dating Edition 2025' }} </h1>
         <ul class="event-info">
           <li>
             <span class="icon fa-solid fa-location-pin fa-fw"></span>Grand
