@@ -1,18 +1,25 @@
 <!-- Clients One -->
 <section class="clients-one style-two">
-    <div class="auto-container">
-        <div class="sec-title title-anim centered">
-            <div class="sec-title_title">Sponsors et Exposants</div>
-            <h2 class="sec-title_heading">Nos partenaires</h2>
-        </div>
-        <div class="row clearfix">
-
-            <!-- Client Column -->
-            <div class="clients-one_column col-lg-3 col-md-4 col-sm-6 flex align-items-center justify-content-center" *ngFor="let partner of partners">
-                <a><img src="{{ partner.image }}" alt="" /></a>
-            </div>
-
-        </div>
+  <div class="auto-container">
+    <div class="sec-title title-anim centered">
+      <div class="sec-title_title">{{ content()?.data?.title }}</div>
+      <h2 class="sec-title_heading">{{ content()?.data?.subtitle }}</h2>
     </div>
+    <div class="row clearfix">
+      <!-- Client Column -->
+      <div
+        class="clients-one_column col-lg-3 col-md-4 col-sm-6 flex align-items-center justify-content-center"
+        *ngFor="let item of content()?.data?.items;"
+      >
+        <!-- <a><img src="{{ partner.image }}" alt="" /></a> -->
+        <p-image
+          [src]="item.image.url | displayMediaFromStrapi"
+          alt="Image"
+          width="250"
+          [preview]="true"
+        />
+      </div>
+    </div>
+  </div>
 </section>
 <!-- End Clients One -->

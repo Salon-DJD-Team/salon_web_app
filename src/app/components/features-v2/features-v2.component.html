@@ -7,13 +7,13 @@
     <div class="auto-container">
         <!-- Sec Title -->
         <div class="sec-title centered">
-            <div class="sec-title_title">Secteurs</div>
-            <h2 class="sec-title_heading">Secteurs Présents</h2>
+            <div class="sec-title_title"> {{ content()?.data?.title || "Secteurs" }} </div>
+            <h2 class="sec-title_heading"> {{ content()?.data?.subtitle || "Default Subtitle" }} </h2>
         </div>
         <div class="row clearfix">
 
             <!-- Event Feature Block -->
-            <div class="event-feature-block col-lg-4 col-md-6 col-sm-12" *ngFor="let feature of features">
+            <div class="event-feature-block col-lg-4 col-md-6 col-sm-12" *ngFor="let feature of content()?.data?.items; let i = index">
                 <div class="inner-box">
                   <div class="left-border"></div>
                   <div class="top-border"></div>

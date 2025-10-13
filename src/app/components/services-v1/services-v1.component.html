@@ -4,15 +4,15 @@
     <div class="services-one_pattern-two" data-parallax='{"y" : 100}' style="background-image:url(assets/images/background/pattern-10.png)"></div>
     <div class="auto-container">
         <div class="sec-title centered title-anim">
-            <div class="sec-title_title">Configuration Salon</div>
-            <h2 class="sec-title_heading">4 Espaces Pavillons</h2>
+            <div class="sec-title_title"> {{ content()?.data?.title || "Configuration Salons" }} </div>
+            <h2 class="sec-title_heading"> {{ content()?.data?.subtitle || "4 Espaces Pavillons" }} </h2>
         </div>
         <div class="row clearfix">
 
             <!-- Service Block One -->
             <div
                 class="service-block_one col-lg-3 col-md-6 col-sm-12"
-                *ngFor="let service of services; let i = index"
+                *ngFor="let service of content()?.data?.items; let i = index"
             >
                 <div
                 class="service-block_one-inner wow"

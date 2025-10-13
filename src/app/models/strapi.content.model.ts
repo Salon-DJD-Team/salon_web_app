@@ -31,7 +31,7 @@ export interface AboutEventData {
   publishedAt: Date;
   locale: string;
   descriptions?: Description[];
-  video?: Video;
+  video?: Media;
   localizations?: AboutEventData[];
 }
 
@@ -42,27 +42,6 @@ export interface Description {
   description: string;
 }
 
-export interface Video {
-  id: number;
-  documentId: string;
-  name: string;
-  alternativeText: null;
-  caption: null;
-  width: null;
-  height: null;
-  formats: null;
-  hash: string;
-  ext: string;
-  mime: string;
-  size: number;
-  url: string;
-  previewUrl: null;
-  provider: string;
-  provider_metadata: null;
-  createdAt: Date;
-  updatedAt: Date;
-  publishedAt: Date;
-}
 
 export interface StrapiPavilionModel {
   data: ListWithTitleData;
@@ -75,6 +54,30 @@ export interface StrapiSectorActivityModel {
 export interface StrapiPartnersModel {
   data: ListWithTitleImageData;
   meta: Meta;
+}
+
+export interface StrapiNewsletterContentModel {
+    data: StrapiNewsLetterData;
+    meta: Meta;
+}
+
+export interface StrapiNewsLetterData {
+    id:         number;
+    documentId: string;
+    title:      string;
+    subtitle:   string;
+    magazines:  Magazine[];
+}
+
+export interface Magazine {
+    id:          number;
+    documentId:  string;
+    title:       string;
+    createdAt:   Date;
+    updatedAt:   Date;
+    publishedAt: Date;
+    file:        Media;
+    poster:      Media;
 }
 
 export interface ListWithTitleData {
@@ -112,10 +115,10 @@ export interface ItemWithImage {
   id: number;
   icon: string;
   title: string;
-  image: Image;
+  image: Media;
 }
 
-export interface Image {
+export interface Media {
   id: number;
   documentId: string;
   name: string;
@@ -155,6 +158,7 @@ export interface Side {
   icon?: string;
   title: string;
   description: null | string;
+  image?: Media;
 }
 
 export interface SocialNetwork {
