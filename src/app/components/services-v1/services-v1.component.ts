@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { StrapiPavilionModel } from '../../models/strapi.content.model';
 
 @Component({
   selector: 'app-services-v1',
@@ -7,7 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './services-v1.component.html',
 })
 export class ServicesV1Component {
-
+  content = input<StrapiPavilionModel | null>();
   services = [
     {
       icon: 'flaticon-connection',

@@ -1,9 +1,9 @@
-<app-slider-v4 />
+<app-slider-v4 [content]="homePage" />
 @defer (on viewport) {
-  <app-about-us-v4 />
+  <app-about-us-v4 [content]="about"  />
   <app-facts-counter-v1 />
-  <app-services-v1 />
-  <app-features-v2 />
+  <app-services-v1 [content]="pavilions" />
+  <app-features-v2 [content]="sectors" />
   <app-events-v5 />
   <app-register-now-v1 />
 } @placeholder {
@@ -13,8 +13,8 @@
 }
 <app-cta-v1 />
 <app-contact-info-v1></app-contact-info-v1>
-<app-partners-v1 />
+<app-partners-v1 [content]="partners" />
 
 <!-- <app-price-plan-v4 /> -->
 <!-- <app-teams-v4 /> -->
-<app-blogs-v1 />
+<app-blogs-v1 [content]="newsletter" />

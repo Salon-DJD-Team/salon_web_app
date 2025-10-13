@@ -5,7 +5,7 @@
 >
   <!-- <div class="footer-three_pattern" style="background-image:url(assets/images/background/pattern-25.png)"></div> -->
   <!-- <div class="footer-three_pattern-two" style="background-image:url(assets/images/background/pattern-26.png)"></div> -->
-  <div class="auto-container">
+  <div *ngIf="content" class="auto-container">
     <!-- Widgets Section -->
     <div class="footer-three-widgets">
       <div class="row clearfix">
@@ -15,22 +15,27 @@
             class="d-flex justify-content-between align-items-center flex-wrap"
           >
             <div class="footer-three_logo p-1 bg-white">
+              @if(content.data.leftSide.image?.url) {
               <a href="/"
                 ><img
-                  ngSrc="assets/images/logo_hcp.jpeg"
+                  [ngSrc]="
+                    content.data.leftSide.image!.url | displayMediaFromStrapi
+                  "
                   width="140"
                   height="70"
                   alt="HCP Logo"
                   title=""
               /></a>
+
+              }
             </div>
           </div>
           <div class="copyright">
             <a
-              href="https://hcpgroup.sn/"
+              [href]="content.data.leftSide.title"
               target="_blank"
               class="text-white font-bold"
-              >https://hcpgroup.sn/</a
+              >{{ content.data.leftSide.title }}</a
             >
           </div>
           <!-- <div class="footer-three_text">We have very good strength in innovative technology and tools with over 35 years of experience. We makes long-term investments goal in global companies in different sectors, mainly in Europe and other countries.</div> -->
@@ -46,21 +51,13 @@
             </li>
           </ul>
           <div class="footer-social_list">
+            @for (item of content.data.social_networks; track $index) {
             <a
-              href="https://facebook.com/"
-              class="facebook fa-brands fa-facebook-f"
-              target="_blank"
-            ></a>
-            <a
-              href="https://youtube.com/"
-              class="youtube fa-brands fa-youtube"
-              target="_blank"
-            ></a>
-            <a
-              href="https://twitter.com/"
-              class="twitter fa-brands fa-twitter"
-              target="_blank"
-            ></a>
+              [href]="item.url"
+              [class]="item.icon"
+              target="_blank"></a>
+            }
+
           </div>
         </div>
 

@@ -1,60 +1,76 @@
 <!-- Header Style One / Two -->
 <header class="main-header header-two">
-
-    <!-- Header Top -->
-    <div class="header-top">
-        <div class="auto-container">
-            <div class="d-flex justify-content-end">
-                <div class="header-top_socials p-8">
-                    <a href="https://www.facebook.com/profile.php?id=61577832896851" class="facebook fa-brands fa-facebook-f" target="_blank"></a>
-                    <a href="https://x.com/dakar_job?t=_gbd8FWPkrcHUP4y8PuJMg&s=09" class="twitter fa-brands fa-twitter" target="_blank"></a>
-                    <a href="https://www.instagram.com/dakar_job_dating?igsh=MWdhOGRlZmQzM3VjMg==" class="instagram fa-brands fa-instagram" target="_blank"></a>
-                    <a href="https://www.linkedin.com/company/dakar-job-dating-2025/" class="linkedin fa-brands fa-linkedin-in" target="_blank"></a>
-                    <a href="https://www.tiktok.com/@dakar.job.dating?_t=ZM-90PSfiV04Qi&_r=1" class="tiktok fa-brands fa-tiktok" target="_blank"></a>
-                </div>
-            </div>
+  <!-- Header Top -->
+  <div class="header-top">
+    <div class="auto-container">
+      <div class="d-flex justify-content-end">
+        <div class="header-top_socials p-8">
+          @for (item of socialNetworks; track $index) {
+          <a [href]="item.url" [class]="item.icon" target="_blank"></a>
+          }
         </div>
+      </div>
     </div>
+  </div>
 
-    <!-- Header Upper -->
-    <div class="header-upper">
-        <div class="auto-container">
-            <div class="inner-container">
-                <div class="d-flex justify-content-between align-items-center flex-wrap">
+  <!-- Header Upper -->
+  <div class="header-upper">
+    <div class="auto-container">
+      <div class="inner-container">
+        <div
+          class="d-flex justify-content-between align-items-center flex-wrap"
+        >
+          <div class="logo-box mr-8!">
+            <div class="logo">
+              <a href=""
+                ><img
+                  ngSrc="assets/images/logoSDJD25.png"
+                  width="140"
+                  height="70"
+                  alt=""
+                  title=""
+              /></a>
+            </div>
+          </div>
+          <div class="nav-outer">
+            <!-- Main Menu -->
+            <nav class="main-menu navbar-expand-md">
+              <div class="navbar-header">
+                <!-- Toggle Button -->
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
 
-                    <div class="logo-box mr-8!">
-                        <div class="logo"><a href=""><img ngSrc="assets/images/logoSDJD25.png" width="140" height="70" alt="" title=""></a></div>
-                    </div>
-                    <div class="nav-outer">
-                        <!-- Main Menu -->
-                        <nav class="main-menu navbar-expand-md">
-                            <div class="navbar-header">
-                                <!-- Toggle Button -->
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
+              <div
+                class="navbar-collapse collapse clearfix"
+                id="navbarSupportedContent"
+              >
+                <span> </span>
+                <app-navigation></app-navigation>
+              </div>
+            </nav>
+          </div>
 
-                            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
-                              <span>
-                              </span>
-                                <app-navigation></app-navigation>
-                            </div>
-                        </nav>
-                    </div>
+          <!-- Main Menu End-->
+          <div class="outer-box d-flex align-items-center flex-wrap">
+            <!-- Search Btn -->
+            <!-- <div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div> -->
 
-                    <!-- Main Menu End-->
-                    <div class="outer-box d-flex align-items-center flex-wrap">
+            <!-- Nav Btn -->
+            <!-- <div class="nav-btn navSidebar-button fa-regular fa-cart-shopping fa-fw"></div> -->
 
-                        <!-- Search Btn -->
-                        <!-- <div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div> -->
-
-                        <!-- Nav Btn -->
-                        <!-- <div class="nav-btn navSidebar-button fa-regular fa-cart-shopping fa-fw"></div> -->
-
-                        <!-- <div class="appointmeny_button-box">
+            <!-- <div class="appointmeny_button-box">
                             <a href="contact-us-01" class="theme-btn btn-style-one">
                                 <span class="btn-wrap">
                                     <span class="text-one">Buy Ticket</span>
@@ -63,45 +79,53 @@
                             </a>
                         </div> -->
 
-                        <!-- Mobile Navigation Toggler -->
-                        <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
-                    </div>
-
-                </div>
+            <!-- Mobile Navigation Toggler -->
+            <div class="mobile-nav-toggler">
+              <span class="icon flaticon-menu"></span>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    <!--End Header Upper-->
+  </div>
+  <!--End Header Upper-->
 
-    <!-- Sticky Header  -->
-    <div class="sticky-header">
-        <div class="auto-container">
-            <div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
+  <!-- Sticky Header  -->
+  <div class="sticky-header">
+    <div class="auto-container">
+      <div
+        class="inner-container d-flex justify-content-between align-items-center flex-wrap"
+      >
+        <!-- Logo -->
+        <div class="logo">
+          <a href="" title=""
+            ><img
+              ngSrc="assets/images/logoSDJD25.png"
+              width="140"
+              height="70"
+              alt=""
+              title=""
+          /></a>
+        </div>
 
-            <!-- Logo -->
-            <div class="logo">
-                <a href="" title=""><img ngSrc="assets/images/logoSDJD25.png" width="140" height="70" alt="" title=""></a>
-            </div>
+        <!-- Right Box -->
+        <div class="right-box">
+          <!-- Main Menu -->
+          <nav class="main-menu">
+            <!--Keep This Empty / Menu will come through Javascript-->
+          </nav>
+          <!-- Main Menu End-->
+        </div>
 
-            <!-- Right Box -->
-            <div class="right-box">
-                <!-- Main Menu -->
-                <nav class="main-menu">
-                    <!--Keep This Empty / Menu will come through Javascript-->
-                </nav>
-                <!-- Main Menu End-->
-            </div>
+        <!-- Main Menu End-->
+        <div class="outer-box d-flex align-items-center flex-wrap">
+          <!-- Search Btn -->
+          <!-- <div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div> -->
 
-            <!-- Main Menu End-->
-            <div class="outer-box d-flex align-items-center flex-wrap">
+          <!-- Nav Btn -->
+          <!-- <div class="nav-btn navSidebar-button fa-regular fa-cart-shopping fa-fw"></div> -->
 
-                <!-- Search Btn -->
-                <!-- <div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div> -->
-
-                <!-- Nav Btn -->
-                <!-- <div class="nav-btn navSidebar-button fa-regular fa-cart-shopping fa-fw"></div> -->
-
-                <!-- <div class="appointmeny_button-box">
+          <!-- <div class="appointmeny_button-box">
                     <a href="contact-us-01" class="theme-btn btn-style-one">
                         <span class="btn-wrap">
                             <span class="text-one">Buy Ticket</span>
@@ -110,38 +134,60 @@
                     </a>
                 </div> -->
 
-                <!-- Mobile Navigation Toggler -->
-                <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
-            </div>
-
+          <!-- Mobile Navigation Toggler -->
+          <div class="mobile-nav-toggler">
+            <span class="icon flaticon-menu"></span>
+          </div>
         </div>
-    </div><!-- End Sticky Menu -->
+      </div>
     </div>
+    <!-- End Sticky Menu -->
+  </div>
 
-    <!-- Mobile Menu  -->
-    <div class="mobile-menu">
-        <div class="menu-backdrop"></div>
-        <div class="close-btn"><span class="icon flaticon-cancel-1"></span></div>
+  <!-- Mobile Menu  -->
+  <div class="mobile-menu">
+    <div class="menu-backdrop"></div>
+    <div class="close-btn"><span class="icon flaticon-cancel-1"></span></div>
 
-        <nav class="menu-box">
-            <div class="nav-logo"><a href=""><img ngSrc="assets/images/logoSDJD25.png" width="90" height="43" alt="" title=""></a></div>
-            <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
-        </nav>
-    </div><!-- End Mobile Menu -->
-
+    <nav class="menu-box">
+      <div class="nav-logo">
+        <a href=""
+          ><img
+            ngSrc="assets/images/logoSDJD25.png"
+            width="90"
+            height="43"
+            alt=""
+            title=""
+        /></a>
+      </div>
+      <div class="menu-outer">
+        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+      </div>
+    </nav>
+  </div>
+  <!-- End Mobile Menu -->
 </header>
 <!-- End Main Header -->
 
 <!-- Search Popup -->
 <div class="search-popup">
-    <div class="color-layer"></div>
-    <button class="close-search"><span class="flaticon-cancel-1"></span></button>
-    <form method="post" action="#">
-        <div class="form-group">
-            <input type="search" name="search-field" value="" placeholder="Search Here" required="">
-            <button class="fa fa-solid fa-magnifying-glass fa-fw" type="submit"></button>
-        </div>
-    </form>
+  <div class="color-layer"></div>
+  <button class="close-search"><span class="flaticon-cancel-1"></span></button>
+  <form method="post" action="#">
+    <div class="form-group">
+      <input
+        type="search"
+        name="search-field"
+        value=""
+        placeholder="Search Here"
+        required=""
+      />
+      <button
+        class="fa fa-solid fa-magnifying-glass fa-fw"
+        type="submit"
+      ></button>
+    </div>
+  </form>
 </div>
 <!-- End Search Popup -->
 

@@ -4,7 +4,8 @@
 mkdir -p /usr/share/nginx/html/config
 cat << EOF  > /usr/share/nginx/html/config/config.json
 {
-  "apiUrl": "$API_URL"
+  "contentApiUrl": "$CONTENT_API_URL",
+  "contentApiKey": "$CONTENT_API_KEY"
 }
 EOF
 

@@ -20,7 +20,8 @@ RUN npm run build --verbose
 
 FROM nginx:alpine as production-build
 
-ENV API_URL=''
+ENV CONTENT_API_URL=''
+
 
 COPY docker/nginx.conf /etc/nginx/nginx.conf
 

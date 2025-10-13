@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { StrapiNewsletterContentModel } from '../../models/strapi.content.model';
+import { DisplayMediaFromStrapiPipe } from '../../pipes/display-image-from-strapi/display-media-from-strapi.pipe';
 
 @Component({
   selector: 'app-blogs-v1',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, DisplayMediaFromStrapiPipe],
   templateUrl: './blogs-v1.component.html',
 })
 export class BlogsV1Component {
+  content = input<StrapiNewsletterContentModel | null>(null);
   articles: {
     id: number;
     title: string;

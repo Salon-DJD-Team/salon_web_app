@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { StrapiSectorActivityModel } from '../../models/strapi.content.model';
 
 @Component({
   selector: 'app-features-v2',
@@ -7,7 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './features-v2.component.html',
 })
 export class FeaturesV2Component {
-
+  content = input<StrapiSectorActivityModel | null>();
   features = [
     {
       // icon: 'assets/images/icons/event-icon-1.png',

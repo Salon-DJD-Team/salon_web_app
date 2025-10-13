@@ -15,16 +15,18 @@
           ></div>
           <div class="about-one_image wow rollIn w-full">
             <!-- <img src="assets/images/resource/about.jpg" alt="" /> -->
+            @if(content()?.data?.video?.url) {
             <iframe
               width="100%"
               height="315"
-              src="./assets/videos/ddd_hcp_1.mp4"
+              [src]="(content()?.data?.video)!.url | displayMediaFromStrapi"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
+            }
           </div>
           <!-- <div class="lightbox-video slider-one_play" (click)="displayVideo()">
                       <span class="fa fa-play"><i class="ripple"></i></span>
@@ -36,53 +38,31 @@
       <div class="content-column col-lg-6 col-md-12 col-sm-12">
         <div class="inner-column">
           <div class="sec-title title-anim">
-            <div class="sec-title_title">A propos de l'événement</div>
-            <h2 class="sec-title_heading">
-              Salon Dakar Job Dating <br />
-              Edition 2025
-            </h2>
-            <div class="sec-title_text">
-              <p>
-                Dakar Job Dating 2025 est le salon international RH de référence
-                de Dakar qui se tient sur 2 jours : le 17 et le 18 décembre à
-                Dakar. Initié par le cabinet HCP et ses partenaires, le salon
-                est le grand rendez-vous des Carrières et du Génie
-                Entrepreneurial.
-              </p>
-              <p>
-                La mission du salon est de réunir en un seul lieu et de
-                connecter le marché du travail sénégalais sous toutes ses
-                composantes : les demandeurs d’emploi, le monde de l’entreprise,
-                les entrepreneurs et l’écosystème des décideurs et bailleurs en
-                matière d’emploi et d’entrepreneuriat.
-              </p>
-              <p>
-                Sous l’égide et le sponsoring des institutions étatiques en
-                charge des questions d’emploi et d’entrepreneuriat, l’ambition
-                du salon est de créer une émulation positive de nature à
-                stimuler le marché du travail au Sénégal et au-delà de ses
-                frontières.
-              </p>
-              <p>
-                Aborder les questions d’actualité RH, promouvoir les métiers peu
-                connu et en pénurie, partager les expériences d’entrepreneurs à
-                succès, favoriser les handijobs ou encore les métiers du futur
-                sont autant de thèmes qui seront traités lors des journées de
-                salon à travers un programme alléchant allant des masterclass,
-                des keynotes, des panels d’experts, aux ateliers de formation
-                offerts aux participants.
-              </p>
-              <p>
-                Le salon sera l’occasion approprié pour accélérer la mise en
-                œuvre d’un des instruments phares des politiques publiques en
-                matière d’emploi sous l’égide de la Direction de l’Emploi :
-                la Convention nationale Etat Employeur.
-              </p>
-            </div>
+            <div class="sec-title_title">{{ content()?.data?.title }}</div>
+            <h2
+              class="sec-title_heading"
+              [innerHTML]="content()?.data?.subtitle! | safeHtml"
+            ></h2>
+            <div
+              class="sec-title_text"
+              [innerHTML]="content()?.data?.description! | safeHtml"
+            ></div>
           </div>
           <div class="row clearfix">
             <!-- About Event Block -->
+            @for(item of content()?.data?.descriptions; track $index) {
             <div class="about-event-block col-lg-6 col-md-6 col-sm-12">
+              <div class="block-inner">
+                <span [innerHTML]="item.icon | safeHtml"></span>
+                <h5>{{ item.title }}</h5>
+                <div
+                  class="about-text mt-0"
+                  [innerHTML]="item.description | safeHtml"
+                ></div>
+              </div>
+            </div>
+            }
+            <!-- <div class="about-event-block col-lg-6 col-md-6 col-sm-12">
               <div class="block-inner">
                 <span class="icon-box flaticon-maps-and-flags"></span>
                 <h5>Lieu</h5>
@@ -91,9 +71,9 @@
                   Dakar / Sénégal
                 </div>
               </div>
-            </div>
+            </div> -->
             <!-- About Event Block -->
-            <div class="about-event-block col-lg-6 col-md-6 col-sm-12">
+            <!-- <div class="about-event-block col-lg-6 col-md-6 col-sm-12">
               <div class="block-inner">
                 <span class="icon-box flaticon-call-1"></span>
                 <h5>Quand</h5>
@@ -102,7 +82,7 @@
                   17 et 18 décembre 2025
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <!-- Btn Box -->
           <!-- <div class="btn-box">
