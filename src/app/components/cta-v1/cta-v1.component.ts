@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CtaV1Component {
 
+  sendMailTo() {
+    window.location.href = 'mailto:contact@salondjd.sn';
+  }
 }
