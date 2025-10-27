@@ -47,7 +47,7 @@ export class NavigationComponent implements AfterViewInit {
         {
           label: 'Inscription',
           go: () => {
-            this.scrollToSection('registerJobSeeker');
+            this.scrollToSection('event-registration');
           },
         },
         {
