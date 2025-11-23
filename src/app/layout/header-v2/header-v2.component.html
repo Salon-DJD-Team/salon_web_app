@@ -3,7 +3,27 @@
   <!-- Header Top -->
   <div class="header-top">
     <div class="auto-container">
-      <div class="d-flex justify-content-end">
+      <div class="flex justify-content-between align-items-center">
+        <div class="header-top_socials p-8 flex gap-2">
+          @for (item of constactDetails; track $index) {
+            @if (item.type === 'email') {
+              <div class="">
+                <i [class]="item.icon" [ngClass]="{'text-white': true }"></i>
+                <a [href]="'mailto:' + item.text" target="_blank">
+                      {{ item.text }}
+                </a>
+              </div>
+            } @else {
+              <div class="">
+                <i [class]="item.icon" [ngClass]="{'text-white': true }"></i>
+                <span class="ml-2 text-white">
+                  {{ item.text }}
+                </span>
+              </div>
+            <!-- } -->
+          }
+        }
+        </div>
         <div class="header-top_socials p-8">
           @for (item of socialNetworks; track $index) {
           <a [href]="item.url" [class]="item.icon" target="_blank"></a>

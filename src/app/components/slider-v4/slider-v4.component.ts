@@ -1,5 +1,6 @@
 import { Component, AfterViewInit, input } from '@angular/core';
 import { StrapiHomepageModel } from '../../models/strapi.content.model';
+import { CONTACT_SALON_EMAIL } from '../../layout/header-v2/header-v2.component';
 
 declare var jQuery: any;
 declare var main_slider: any;
@@ -30,6 +31,10 @@ export class SliderV4Component implements AfterViewInit {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  }
+
+  openSendEmail(): void {
+    window.location.href = 'mailto:' + CONTACT_SALON_EMAIL;
   }
 
 }
