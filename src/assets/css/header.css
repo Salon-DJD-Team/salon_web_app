@@ -810,15 +810,17 @@
 .header-top_socials{
 	position: relative;
 	padding: 12px 30px;
-	border-radius: 50px 0px 0px 50px;
+	border-radius: 10px 10px 10px 10px;
 	background-color: var(--color-four);
 }
 
 .header-top_socials a{
 	position: relative;
 	margin: 0px 8px;
-	font-size: var(--font-16);
+	/* font-size: var(--font-16); */
 	color: var(--white-color);
+  font-size: 14px;
+
 }
 
 .header-top_socials a:hover{

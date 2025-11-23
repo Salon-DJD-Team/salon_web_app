@@ -116,7 +116,7 @@
         <div class="btns-box">
           <a
             (click)="scrollToSection('event-registration')"
-            class="theme-btn btn-style-three"
+            class="theme-btn btn-style-three btn-border-radius-10"
           >
             <span class="btn-wrap flex! justify-center">
               <span class="text-one">Vous êtes candidat</span>
@@ -124,11 +124,20 @@
             </span>
           </a>
           <a
-            (click)="scrollToSection('registerBusiness')"
-            class="theme-btn btn-style-three"
+            (click)="openSendEmail()"
+            class="theme-btn btn-style-three btn-border-radius-10"
           >
             <span class="btn-wrap flex! justify-center">
-              <span class="text-one">Vous êtes employeur</span>
+              <span class="text-one">Vous êtes Entreprise, PME, TPE, ONG</span>
+              <span class="text-two">Participez</span>
+            </span>
+          </a>
+          <a
+            (click)="scrollToSection('event-registration')"
+            class="theme-btn btn-style-three btn-border-radius-10"
+          >
+            <span class="btn-wrap flex! justify-center">
+              <span class="text-one">Vous êtes Speaker</span>
               <span class="text-two">Participez</span>
             </span>
           </a>
