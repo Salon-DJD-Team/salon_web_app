@@ -1,0 +1,73 @@
+<!-- Testimonial One -->
+<section class="testimonial-one">
+  <div
+    class="testimonial-one_pattern"
+    style="background-image: url(assets/images/background/8.jpg)"
+  ></div>
+  <div class="auto-container">
+    <div class="sec-title">
+      <div class="sec-title_title"> {{content()?.data?.title}} </div>
+      <h2 class="sec-title_heading"> {{content()?.data?.subtitle}} </h2>
+    </div>
+    @if(!content()?.data?.job_posts?.length) {
+    <h4 class="text-gray-700 dark:text-blue-400!">Aucun poste disponible pour le moment. Veuillez revenir plus tard.</h4>
+    } @else {
+    <p-carousel
+      [value]="content()?.data?.job_posts!"
+      [numVisible]="2"
+      [numScroll]="1"
+      [circular]="true"
+      [responsiveOptions]="responsiveOptions"
+      [autoplayInterval]="10000000"
+      [showIndicators]="true"
+      [showNavigators]="true"
+      contentClass="custom-carousel-content"
+    >
+      <ng-template let-testimonial #item>
+        <div class="testimonial-block_one-inner p-4 mr-3 h-full">
+          <div class="testimonial-block_one-content">
+
+            <div class="testimonial-block_one-text">
+              @if (testimonial?.type) {
+                <strong>Type de poste: </strong> {{ testimonial.type }}
+
+              }
+             <br>
+             <span class="service-block_one-text">
+               {{ testimonial.description }}
+             </span>
+            </div>
+            <a
+              [href]="testimonial.externalLink"
+              target="_blank"
+              class="external-link bold text-lg! mt-4"
+            >
+              Voir plus d'informations
+            </a>
+            <div class="testimonial-block_one-rating">
+              <!-- <span class="fa fa-star" *ngFor="let star of [].constructor(testimonial.rating)"></span> -->
+            </div>
+            <div
+              class="testimonial-block_one-quote"
+              [ngClass]="testimonial.quoteIcon"
+            ></div>
+          </div>
+          <div class="testimonial-block_one-lower">
+            <div class="testimonial-block_one-author flex items-end">
+              <img
+                [src]="testimonial.companyLogo.url | displayMediaFromStrapi"
+                alt="{{ testimonial.company }}"
+              />
+            </div>
+            <strong>{{ testimonial.title }}</strong>
+            <span class="text-2xl!">
+              {{ testimonial.company }}
+            </span>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+    }
+  </div>
+</section>
+<!-- End Testimonial One -->

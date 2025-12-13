@@ -1,10 +1,10 @@
 import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StrapiSectorActivityModel } from '../../models/strapi.content.model';
-
+import { TooltipModule } from 'primeng/tooltip';
 @Component({
   selector: 'app-features-v2',
-  imports: [CommonModule],
+  imports: [CommonModule, TooltipModule],
   templateUrl: './features-v2.component.html',
 })
 export class FeaturesV2Component {

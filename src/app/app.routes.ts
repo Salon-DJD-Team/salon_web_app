@@ -11,9 +11,6 @@ export const routes: Routes = [
     },
     {
         path: '**',
-        loadComponent: () => import('./pages/not-found/not-found.component').then((m) => m.NotfoundComponent),
-        data: {
-            title: '404 Not Found',
-        }
+        redirectTo: '',
       }
 ];

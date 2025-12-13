@@ -13,12 +13,18 @@ import { PartnersV1Component } from '../../components/partners-v1/partners-v1.co
 import { StrapiContentService } from '../../services/strapi-content/strapi-content.service';
 import {
   StrapiAboutEventModel,
+  StrapiFaqsContentModel,
   StrapiHomepageModel,
+  StrapiJobPostsContentModel,
   StrapiNewsletterContentModel,
   StrapiPartnersModel,
   StrapiPavilionModel,
   StrapiSectorActivityModel,
+  StrapiSpeakersContentModel,
 } from '../../models/strapi.content.model';
+import { TeamsV2Component } from "../../components/teams-v2/teams-v2.component";
+import { FaqsV2Component } from '../../components/faqs-v2/faqs-v2.component';
+import { JobPostsSectionV2Component } from "../../components/job-posts-section-v2/job-posts-section-v2.component";
 
 @Component({
   selector: 'app-home-v4',
@@ -30,13 +36,15 @@ import {
     EventsV5Component,
     RegisterNowV1Component,
     // PricePlanV4Component,
-    // TeamsV4Component,
     CtaV1Component,
     BlogsV1Component,
     ServicesV1Component,
     ContactInfoV1Component,
     PartnersV1Component,
-  ],
+    TeamsV2Component,
+    FaqsV2Component,
+    JobPostsSectionV2Component
+],
   templateUrl: './home-v4.component.html',
 })
 export class HomeV4Component {
@@ -46,6 +54,9 @@ export class HomeV4Component {
   sectors: StrapiSectorActivityModel | null = null;
   about: StrapiAboutEventModel | null = null;
   newsletter: StrapiNewsletterContentModel | null = null;
+  speakers: StrapiSpeakersContentModel | null = null;
+  jobPosts: StrapiJobPostsContentModel | null = null;
+  faqsSection: StrapiFaqsContentModel | null = null;
   constructor(private strapiContentService: StrapiContentService) {
     this.loadHomepageContent();
     this.loadPartnersContent();
@@ -53,6 +64,9 @@ export class HomeV4Component {
     this.loadSectorsContent();
     this.loadAboutContent();
     this.loadNewsletterContent();
+    this.loadSpeakersContent();
+    this.loadJobPostsContent();
+    this.loadFaqsContent();
   }
 
   private loadHomepageContent() {
@@ -118,6 +132,40 @@ export class HomeV4Component {
       },
       error: (error) => {
         console.error('Error loading newsletter content:', error);
+      },
+    });
+  }
+
+  private loadSpeakersContent() {
+    this.strapiContentService.getSpeakersContents().subscribe({
+      next: (data) => {
+        this.speakers = data;
+      },
+      error: (error) => {
+        console.error('Error loading speakers content:', error);
+      },
+    });
+  }
+
+  private loadJobPostsContent() {
+    this.strapiContentService.getJobPostsContents().subscribe({
+      next: (data) => {
+        // Handle job posts data
+        this.jobPosts = data;
+      },
+      error: (error) => {
+        console.error('Error loading job posts content:', error);
+      },
+    });
+  }
+
+  private loadFaqsContent() {
+    this.strapiContentService.getFaqsContents().subscribe({
+      next: (data) => {
+        this.faqsSection = data;
+      },
+      error: (error) => {
+        console.error('Error loading FAQs content:', error);
       },
     });
   }

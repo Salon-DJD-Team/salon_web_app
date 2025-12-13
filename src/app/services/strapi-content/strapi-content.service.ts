@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AppConfigModel } from '../../models/appConfig.model';
-import { StrapiAboutEventModel, StrapiFooterContentModel, StrapiHomepageModel, StrapiNewsletterContentModel, StrapiPartnersModel, StrapiPavilionModel, StrapiSectorActivityModel } from '../../models/strapi.content.model';
+import { StrapiAboutEventModel, StrapiFaqsContentModel, StrapiFooterContentModel, StrapiHomepageModel, StrapiJobPostsContentModel, StrapiNewsletterContentModel, StrapiPartnersModel, StrapiPavilionModel, StrapiSectorActivityModel, StrapiSpeakersContentModel } from '../../models/strapi.content.model';
 
 @Injectable({
   providedIn: 'root',
@@ -16,6 +16,9 @@ export class StrapiContentService {
   private partnersEndpoint = '/api/partner';
   private newsLetterEndpoint = '/api/newsletter';
   private footerEndpoint = '/api/footer';
+  private speakersEndpoint = '/api/speakers-event';
+  private jobPostsEndpoint = '/api/job-post-section';
+  private faqsEndpoint = '/api/faq-event';
   private locale = 'fr';
   constructor(private http: HttpClient) {}
 
@@ -72,5 +75,27 @@ export class StrapiContentService {
     params = params.append('populate[magazines][populate]', '*');
     params = params.append('locale', this.locale);
     return this.http.get<StrapiNewsletterContentModel>(`${this.strapiBaseUrl}${this.newsLetterEndpoint}`, { params });
+  }
+
+  getSpeakersContents() {
+    let params = new HttpParams();
+    params = params.append('populate[list][populate]', '*');
+    params = params.append('locale', this.locale);
+    return this.http.get<StrapiSpeakersContentModel>(`${this.strapiBaseUrl}${this.speakersEndpoint}`, { params });
+  }
+
+
+  getJobPostsContents() {
+    let params = new HttpParams();
+    params = params.append('populate[job_posts][populate]', '*');
+    params = params.append('locale', this.locale);
+    return this.http.get<StrapiJobPostsContentModel>(`${this.strapiBaseUrl}${this.jobPostsEndpoint}`, { params });
+  }
+
+  getFaqsContents() {
+    let params = new HttpParams();
+    params = params.append('populate[list][populate]', '*');
+    params = params.append('locale', this.locale);
+    return this.http.get<StrapiFaqsContentModel>(`${this.strapiBaseUrl}${this.faqsEndpoint}`, { params });
   }
 }
