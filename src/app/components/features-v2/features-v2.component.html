@@ -13,7 +13,7 @@
         <div class="row clearfix">
 
             <!-- Event Feature Block -->
-            <div class="event-feature-block col-lg-4 col-md-6 col-sm-12" *ngFor="let feature of content()?.data?.items; let i = index">
+            <div class="event-feature-block col-lg-4 col-md-6 col-sm-12" *ngFor="let feature of content()?.data?.items; let i = index" pTooltip="{{ feature.description }}" tooltipPosition="top">
                 <div class="inner-box">
                   <div class="left-border"></div>
                   <div class="top-border"></div>

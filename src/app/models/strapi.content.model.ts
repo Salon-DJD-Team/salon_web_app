@@ -42,7 +42,6 @@ export interface Description {
   description: string;
 }
 
-
 export interface StrapiPavilionModel {
   data: ListWithTitleData;
   meta: Meta;
@@ -57,27 +56,105 @@ export interface StrapiPartnersModel {
 }
 
 export interface StrapiNewsletterContentModel {
-    data: StrapiNewsLetterData;
-    meta: Meta;
+  data: StrapiNewsLetterData;
+  meta: Meta;
+}
+export interface StrapiSpeakersContentModel {
+  data: StrapiSpeakersData;
+  meta: Meta;
+}
+
+export interface StrapiJobPostsContentModel {
+  data: StrapiJobPostsData;
+  meta: Meta;
+}
+
+export interface StrapiFaqsContentModel {
+  data: StrapiFaqsData;
+  meta: Meta;
+}
+
+export interface StrapiFaqsData {
+  id: number;
+  documentId: string;
+  title: string;
+  subtitle: string;
+  list: FaqItem[];
+}
+
+export interface FaqItem {
+  id: number;
+  documentId: string;
+  question: string;
+  answer: string;
+}
+
+export interface StrapiJobPostsData {
+  id: number;
+  documentId: string;
+  title: string;
+  subtitle: string;
+  job_posts: JobPostItem[];
+}
+
+export interface JobPostItem {
+  id: number;
+  documentId: string;
+  title: string;
+  company: string;
+  description: string;
+  location: string;
+  type: string;
+  companyLogo: Media;
+  requirements: string[];
+  postedDate: string;
+  externalLink: string;
+}
+
+export interface StrapiSpeakersData {
+  id: number;
+  documentId: string;
+  title: string;
+  subtitle: string;
+  list: SpeakerItem[];
+}
+
+export interface SpeakerItem {
+  id: number;
+  documentId: string;
+  name: string;
+  designation: string;
+  createdAt: Date;
+  updatedAt: Date;
+  publishedAt: Date;
+  locale: string;
+  image: Media;
+  socials: SocialLink[];
+}
+
+export interface SocialLink {
+  id: number;
+  url: string;
+  icon: string;
 }
 
 export interface StrapiNewsLetterData {
-    id:         number;
-    documentId: string;
-    title:      string;
-    subtitle:   string;
-    magazines:  Magazine[];
+  id: number;
+  documentId: string;
+  title: string;
+  subtitle: string;
+  magazines: Magazine[];
 }
 
 export interface Magazine {
-    id:          number;
-    documentId:  string;
-    title:       string;
-    createdAt:   Date;
-    updatedAt:   Date;
-    publishedAt: Date;
-    file:        Media;
-    poster:      Media;
+  id: number;
+  documentId: string;
+  title: string;
+  createdAt: Date;
+  updatedAt: Date;
+  publishedAt: Date;
+  file: Media;
+  poster: Media;
 }
 
 export interface ListWithTitleData {

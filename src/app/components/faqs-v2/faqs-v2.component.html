@@ -1,0 +1,51 @@
+<!-- Accordion Box / Style Two -->
+<section class="py-3">
+  <div class="auto-container">
+    <div class="sec-title title-anim centered">
+      <div class="sec-title_title">{{ content()?.data?.title }}</div>
+      <h2 class="sec-title_heading">{{ content()?.data?.subtitle }}</h2>
+    </div>
+  </div>
+  <div class="auto-container">
+    <p-accordion>
+      @for (tab of content()?.data?.list; track $index) {
+      <p-accordion-panel [value]="$index">
+        <p-accordion-header>
+          <ng-template #toggleicon let-active="active">
+            @if (active) {
+            <i class="fa-solid fa-minus"></i>
+            } @else {
+            <i class="fa-solid fa-plus"></i>
+            }
+          </ng-template>
+          {{ tab.question }}
+        </p-accordion-header>
+        <p-accordion-content>
+          <p class="m-0 text-lg!" [innerHTML]="tab.answer"></p>
+        </p-accordion-content>
+      </p-accordion-panel>
+      } @empty {
+      <h4 class="text-gray-700 dark:text-blue-400! text-center">Aucune FAQ disponible pour le moment.</h4>
+      }
+    </p-accordion>
+    <!-- <ul class="accordion-box style-two">
+      <li
+        class="accordion block"
+        *ngFor="let faq of faqs; let i = index"
+        [ngClass]="{ 'active-block': i === 0 }"
+      >
+        <div class="acc-btn" [ngClass]="{ active: i === 0 }">
+          <div class="icon-outer">
+            <span class="icon fa-solid fa-angle-down fa-fw"></span>
+          </div>
+          {{ faq.question }}
+        </div>
+        <div class="acc-content" [ngClass]="{ current: i === 0 }">
+          <div class="content">
+            <p>{{ faq.answer }}</p>
+          </div>
+        </div>
+      </li>
+    </ul> -->
+  </div>
+</section>
