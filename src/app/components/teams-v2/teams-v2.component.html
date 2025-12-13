@@ -1,49 +1,51 @@
 <!-- Speakers One -->
-<section id="speakers" class="team-one">
-  <div class="auto-container">
-    <div class="sec-title title-anim centered">
-      <div class="sec-title_title"> {{ content()?.data?.title }} </div>
-      <h2 class="sec-title_heading"> {{ content()?.data?.subtitle }} </h2>
-    </div>
-    <div class="row clearfix">
-      <!-- Speaker Block One -->
-      @if(content() && content()?.data?.list!.length > 0) {
-      <div
-        class="team-block_one col-lg-4 col-md-6 col-sm-12"
-        *ngFor="let team of content()?.data?.list; let i = index"
-      >
-        <div
-          class="team-block_one-inner wow {{ getAnimationClass(i) }}"
-          data-wow-delay="0ms"
-          data-wow-duration="1500ms"
-        >
-          <div
-            class="team-block_one-pattern"
-            style="
-              background-image: url(assets/images/background/pattern-20.png);
-            "
-          ></div>
-          <div class="team-block_one-image">
-            <img [src]="team.image.url | displayMediaFromStrapi" [alt]="team.name" />
-            <div class="team-block_one-social-list">
-              @for(social of team.socials; track $index) {
-              <a [href]="social.url" [class]="social.icon" target="_blank"></a>
+ @if(content()?.data?.list?.length) {
+   <section id="speakers" class="team-one">
+     <div class="auto-container">
+       <div class="sec-title title-anim centered">
+         <div class="sec-title_title"> {{ content()?.data?.title }} </div>
+         <h2 class="sec-title_heading"> {{ content()?.data?.subtitle }} </h2>
+       </div>
+       <div class="row clearfix">
+         <!-- Speaker Block One -->
+         @if(content() && content()?.data?.list!.length > 0) {
+         <div
+           class="team-block_one col-lg-4 col-md-6 col-sm-12"
+           *ngFor="let team of content()?.data?.list; let i = index"
+         >
+           <div
+             class="team-block_one-inner wow {{ getAnimationClass(i) }}"
+             data-wow-delay="0ms"
+             data-wow-duration="1500ms"
+           >
+             <div
+               class="team-block_one-pattern"
+               style="
+                 background-image: url(assets/images/background/pattern-20.png);
+               "
+             ></div>
+             <div class="team-block_one-image">
+               <img [src]="team.image.url | displayMediaFromStrapi" [alt]="team.name" />
+               <div class="team-block_one-social-list">
+                 @for(social of team.socials; track $index) {
+                 <a [href]="social.url" [class]="social.icon" target="_blank"></a>
 
-              }
-            </div>
-          </div>
-          <div class="team-block_one-content">
-            <h4 class="team-block_one-title">
-              <a href="#">{{ team.name }}</a>
-            </h4>
-            <div class="team-block_one-designation">{{ team.designation }}</div>
-          </div>
-        </div>
-      </div>
-      } @else {
-      <h4 class="text-gray-700 dark:text-blue-400!">Aucun intervenant disponible</h4>
-      }
-    </div>
-  </div>
-</section>
+                 }
+               </div>
+             </div>
+             <div class="team-block_one-content">
+               <h4 class="team-block_one-title">
+                 <a href="#">{{ team.name }}</a>
+               </h4>
+               <div class="team-block_one-designation">{{ team.designation }}</div>
+             </div>
+           </div>
+         </div>
+         } @else {
+         <h4 class="text-gray-700 dark:text-blue-400!">Aucun intervenant disponible</h4>
+         }
+       </div>
+     </div>
+   </section>
+ }
 <!-- End Speakers One -->
