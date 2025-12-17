@@ -74,12 +74,15 @@
     </div>
 
     <div class="download-btns-box text-center">
-      <a href="#" class="theme-btn btn-style-two btn-border-radius-10">
+      <button type="button"
+              class="theme-btn btn-style-two btn-border-radius-10"
+              (click)="downloadPDF('Programme_Salon_DJD2025.pdf')"
+              title="Télécharger le programme en PDF">
         <span class="btn-wrap">
           <span class="text-one">Télécharger le programme</span>
           <span class="text-two">Télécharger le programme</span>
         </span>
-      </a>
+      </button>
     </div>
 
   </div>
