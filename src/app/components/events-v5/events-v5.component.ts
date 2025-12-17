@@ -19,6 +19,36 @@ export class EventsV5Component implements AfterViewInit {
     })(jQuery);
   }
 
+  /**
+   * Download PDF file from public folder
+   * @param filename - Name of the PDF file in public folder
+   */
+  downloadPDF(filename: string = 'programme-salon-djd-2025.pdf'): void {
+    try {
+      // Create a temporary anchor element
+      const link = document.createElement('a');
+
+      // Set the file URL (from public folder)
+      link.href = `/assets/documents/${filename}`;
+
+      // Set download attribute with suggested filename
+      link.download = filename;
+
+      // Add to DOM temporarily
+      document.body.appendChild(link);
+
+      // Trigger download
+      link.click();
+
+      // Remove from DOM
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Error downloading PDF:', error);
+      // Fallback: open in new tab
+      window.open(`/assets/documents/${filename}`, '_blank');
+    }
+  }
+
   tabs: {
     id: string;
     day: string;
